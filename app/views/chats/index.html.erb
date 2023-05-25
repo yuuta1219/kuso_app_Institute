@@ -1,9 +1,9 @@
 <%= form_with(url: chats_path, method: "get", local: true) do %>
-  <%= label_tag :user_input, "Your input:" %>
-  <%= text_field_tag :user_input %>
+  <%= label_tag :synonym, "Your input:" %>
+  <%= text_field_tag :synonym %>
   <%= submit_tag "Submit" %>
 <% end %>
 
-<% if @generated_text %>
-  <p><%= @generated_text %></p>
+<% if @response %>
+  <p><%= @response %></p>
 <% end %>
