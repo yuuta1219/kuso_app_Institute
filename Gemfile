@@ -65,3 +65,5 @@ group :development do
 end
 
 gem 'cssbundling-rails'
+gem "ruby-openai"
+gem 'config'
