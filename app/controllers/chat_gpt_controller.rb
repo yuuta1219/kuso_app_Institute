@@ -1,0 +1,2 @@
+class ChatGptController < ApplicationController
+end
