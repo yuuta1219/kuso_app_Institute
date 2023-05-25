@@ -1,6 +1,6 @@
 require 'openai'
 
-class OpenAIClient
+class OpenAiClient
 
   def initialize
     @client = OpenAI::Client.new(access_token: ENV["OPENAI_API_KEY"])

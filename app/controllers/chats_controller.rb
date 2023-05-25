@@ -1,7 +1,7 @@
 class ChatsController < ApplicationController
   
   def index
-    client = OpenAIClient.new
+    client = OpenAiClient.new
     synonym = params[:synonym]
     @response = client.chat(synonym)
   end
