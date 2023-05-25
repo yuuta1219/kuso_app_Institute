@@ -79,6 +79,12 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    faraday (2.7.5)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (3.0.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.13.0)
@@ -105,6 +111,7 @@ GEM
     mini_mime (1.1.2)
     minitest (5.18.0)
     msgpack (1.7.1)
+    multipart-post (2.3.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -152,6 +159,10 @@ GEM
     rake (13.0.6)
     reline (0.3.4)
       io-console (~> 0.5)
+    ruby-openai (4.1.0)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
+    ruby2_keywords (0.0.5)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -191,6 +202,7 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.5)
+  ruby-openai
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
