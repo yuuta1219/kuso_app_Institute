@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+  get 'users/create'
   root 'chats#index'
 
   get'prison', to: 'chats#prison'
