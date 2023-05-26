@@ -19,7 +19,7 @@
         <div class="chat-image">
           <%= image_tag("Chat_bot.png", width: '100px', height: '100px') %>
         </div>
-        <div class="chat-bubble">なんでも聞いてください</div>
+        <div class="chat-bubble">なんでも聞いてください。食べ物の名前以外は入力しないでください。</div>
       </div>
     </div>
   <% end %>
@@ -31,6 +31,7 @@
       </div>
   <% end %>
 </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const submitButton = document.querySelector('.submit-button');
