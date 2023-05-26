@@ -1,5 +1,7 @@
 class ChatsController < ApplicationController
   rescue_from RuntimeError, with: :handle_unwanted_word
+  before_action :prisoner_go_to_prison , only: [:index]
+  before_action :not_prison, only: [:prison]
   
   def index
     random_number = rand(1..10)

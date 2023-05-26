@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'chats#index'
 
   get'prison', to: 'chats#prison'
+  get'purgatory', to: 'chats#purgatory'
   get '/path/to/mercy', to: 'chats#mercy'
 
   get 'login', to: 'user_sessions#new'
