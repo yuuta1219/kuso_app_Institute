@@ -13,9 +13,12 @@ class ChatsController < ApplicationController
   end
   
   def prison
+    user = User.create_prisoner
+    auto_login(user)
   end
 
   def mercy
+    current_user.destroy  if current_user.prisoner?
     redirect_to root_path
   end
 
