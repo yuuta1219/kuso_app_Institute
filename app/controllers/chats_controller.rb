@@ -11,8 +11,12 @@ class ChatsController < ApplicationController
     end
     @response = client.chat(input)
   end
-
+  
   def prison
+  end
+
+  def mercy
+    redirect_to root_path
   end
 
   private
