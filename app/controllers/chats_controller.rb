@@ -1,7 +1,7 @@
 class ChatsController < ApplicationController
   rescue_from RuntimeError, with: :handle_unwanted_word
   before_action :prisoner_go_to_prison , only: [:index]
-  before_action :not_prison, only: [:prison]
+  before_action :not_prison, only: [:purgatory]
   
   def index
     random_number = rand(1..10)
@@ -18,6 +18,8 @@ class ChatsController < ApplicationController
     user = User.create_prisoner
     auto_login(user)
   end
+
+  def purgatory; end
 
   def mercy
     current_user.destroy  if current_user.prisoner?
