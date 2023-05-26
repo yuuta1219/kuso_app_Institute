@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/path/to/mercy', to: 'chats#mercy'
 
   resources :chats
+  resources :users
 end
