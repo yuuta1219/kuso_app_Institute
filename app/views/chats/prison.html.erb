@@ -1,0 +1,43 @@
+<div class="m-2 prison_chat border">
+    <div class="flex">
+      <div class="chat chat-start">
+        <div class="chat-image">
+          <%= image_tag("Error_bot.png", width: '200px', height: '200px') %>
+        </div>
+        <div class="chat-bubble">ハッキングが検知されました。直ちに機能を停止します。</div>
+      </div>
+    </div>
+  <div class="border-t"></div>
+  <%= form_with(url: chats_path, method: "get") do |f| %>
+    <div class="w-full flex m-2">
+      <%= text_field_tag :input, nil, class: "input input-bordered input-secondary flex-grow m-2", placeholder: "カロリーを教えてほしい食べ物を入力しよう" %>
+      <%= f.submit "Submit", class: 'btn submit-button m-2 mr-4' %>
+      </div>
+  <% end %>
+</div>
+<div class="prison hidden">
+  <%= image_tag "ori.jpeg", class: "h-500 w-full" %>
+</div>
+
+<script>
+setTimeout(() => {
+  const elements = document.querySelectorAll('.prison_chat');
+  elements.forEach((element) => {
+    element.classList.add('animate-slide-rotate-hor-b-fwd');
+  });
+  setTimeout(() => {
+    elements.forEach((element) => {
+      element.classList.add('hidden');
+    });
+  }, 800);
+}, 5000);
+
+setTimeout(() => {
+  const elements = document.querySelectorAll('.prison');
+  elements.forEach((element) => {
+    const firstLetter = element.innerHTML.charAt(0);
+    element.classList.remove('hidden');
+    element.classList.add('animate-scale-in-hor-center');
+  });
+}, 5800);
+</script>

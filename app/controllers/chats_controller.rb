@@ -1,4 +1,5 @@
 class ChatsController < ApplicationController
+  rescue_from RuntimeError, with: :handle_unwanted_word
   
   def index
     random_number = rand(1..10)
@@ -12,5 +13,15 @@ class ChatsController < ApplicationController
   end
 
   def prison
+  end
+
+  private
+
+  def handle_unwanted_word(e)
+    if e.message == "Input contains unwanted word"
+      redirect_to prison_path
+    else
+      raise e
+    end
   end
 end
