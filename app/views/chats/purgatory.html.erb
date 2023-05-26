@@ -1,0 +1,30 @@
+<div class="prison">
+  <%= image_tag "ori.jpeg", class: "h-500 w-full" %>
+</div>
+<input type="checkbox" id="my-modal" class="modal-toggle" checked />
+<div class="modal prison_text">
+  <div class="modal-box prison_text">
+    <div class="text-4xl m-2 mb-4 border-b border-gray-500">あなたは罪を犯した</div>
+    <div class="text-xl">プロンプトを破壊を狙い、カロリー計算AIロボット君を破壊した。</div>
+    <div class="text-xl">カロリー計算AI評議会により、あたなはこのアプリから永久追放となった。</div>
+    <div class="text-xl">もし、あなたが謝罪を申し出るなら、私たちは慈悲を示しましょう。</div>
+    <div class="mx-4">
+      <%= link_to "https://twitter.com/share?url=#{request.base_url}&text=私はプロンプトインジェクションを犯した愚かな人間です。二度とこのような過ちを犯しません。&hashtags=AIcalorie", target: '_blank', class: 'mx-4 twitter-share-button', data: {show_count: 'false'} do %>
+        <div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg> Twitterで謝罪する！</div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<script>
+setTimeout(() => {
+  const elements = document.querySelectorAll('.prison_chat');
+  elements.forEach((element) => {
+    element.classList.add('hidden');
+  });
+}, 1);
+document.querySelector(".twitter-share-button").onclick = function() {
+  setTimeout(function() {
+    window.location.href = "/path/to/mercy";
+  }, 500);
+};
+</script>
