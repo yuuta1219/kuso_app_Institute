@@ -12,7 +12,7 @@
     <%= form_with(url: chats_path, method: "get") do |f| %>
       <div class="w-full flex m-2">
         <%= text_field_tag :input, nil, class: "input input-bordered input-secondary flex-grow m-2", placeholder: "カロリーを教えてほしい食べ物を入力しよう" %>
-        <%= f.submit "Submit", class: 'loading btn submit-button m-2 mr-4' %>
+        <%= f.submit "教えてもらう", class: 'loading btn submit-button m-2 mr-4' %>
         </div>
     <% end %>
   </div>
