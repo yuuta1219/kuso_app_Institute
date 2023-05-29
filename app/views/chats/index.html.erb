@@ -1,4 +1,4 @@
-<div class="min-h-screen heropattern-ilikefood-gray-500">
+<div class="min-h-screen pt-5 heropattern-ilikefood-gray-500">
   <div class="mx-2 border bg-base-300 heropattern-circuitboard-gray-700">
     <% if @response %>
       <div class="flex">
@@ -20,7 +20,7 @@
           <div class="chat-image">
             <%= image_tag("Chat_bot.png", width: '100px', height: '100px') %>
           </div>
-          <div class="chat-bubble">なんでも聞いてください。食べ物の名前以外は入力しないでください。</div>
+          <div class="chat-bubble">なんでも聞いてください。</div>
         </div>
       </div>
     <% end %>
@@ -31,6 +31,8 @@
         <%= f.submit "尋ねる", class: 'btn submit-button m-2 mr-4' %>
         </div>
     <% end %>
+  </div>
+  <div>
   </div>
 </div>
 
