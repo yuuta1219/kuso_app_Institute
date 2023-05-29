@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   namespace :calorie_counter do
     resources :chats
   end
-  namespace :calorie_counter do
+  namespace :pomodoro_timer do
     resources :timers
   end
   resources :users
