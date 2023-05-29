@@ -9,7 +9,7 @@
         </div>
       </div>
     <div class="border-t"></div>
-    <%= form_with(url: chats_path, method: "get") do |f| %>
+    <%= form_with(url: calorie_counter_chats_path, method: "get") do |f| %>
       <div class="w-full flex m-2">
         <%= text_field_tag :input, nil, class: "input input-bordered input-secondary flex-grow m-2", placeholder: "カロリーを教えてほしい食べ物を入力しよう" %>
         <%= f.submit "尋ねる", class: 'loading btn submit-button m-2 mr-4' %>
