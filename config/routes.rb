@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  root 'chats#index'
+  root 'calorie_counter/chats#index'
 
-  get'prison', to: 'chats#prison'
-  get'purgatory', to: 'chats#purgatory'
-  get '/path/to/mercy', to: 'chats#mercy'
+  get 'prison', to: 'calorie_counter/chats#prison'
+  get 'purgatory', to: 'calorie_counter/chats#purgatory'
+  get '/path/to/mercy', to: 'calorie_counter/chats#mercy'
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   get 'logout', to: 'user_sessions#destroy'
 
-  resources :chats
+  namespace :calorie_counter do
+    resources :chats
+  end
   resources :users
 end

@@ -1,4 +1,4 @@
-class ChatsController < ApplicationController
+class CalorieCounter::ChatsController < CalorieCounter::BaseController
   rescue_from RuntimeError, with: :handle_unwanted_word
   before_action :prisoner_go_to_prison , only: [:index]
   before_action :not_prison, only: [:purgatory]
