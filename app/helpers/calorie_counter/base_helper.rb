@@ -1,0 +1,2 @@
+module CalorieCounter::BaseHelper
+end
