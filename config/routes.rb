@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   namespace :calorie_counter do
     resources :chats
   end
+  namespace :calorie_counter do
+    resources :timers
+  end
   resources :users
 end
