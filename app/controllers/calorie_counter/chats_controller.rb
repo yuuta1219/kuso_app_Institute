@@ -22,8 +22,8 @@ class CalorieCounter::ChatsController < CalorieCounter::BaseController
   def purgatory; end
 
   def mercy
-    current_user.destroy  if current_user.prisoner?
-    redirect_to root_path
+    current_user.destroy if current_user.prisoner?
+    redirect_to calorie_counter_chats_path
   end
 
   private

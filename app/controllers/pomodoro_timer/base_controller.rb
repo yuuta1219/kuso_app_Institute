@@ -4,6 +4,6 @@ class PomodoroTimer::BaseController < ApplicationController
   private
   
   def pmodoro_theme_color
-    @theme_color = "retro"
+    @theme_color = "luxury"
   end
 end
