@@ -1,39 +1,49 @@
-<div class="form-control">
-  <label class="label cursor-pointer">
-    <span class="label-text">通常速度</span> 
-    <input id="speed-1x" type="radio" name="radio-10" class="radio checked:bg-red-500" checked />
-  </label>
+<div class="min-h-screen relative">
+  <%= image_tag "normal_clock.png", id: "normal-clock", class: "opacity-50 w-full absolute" %>
+  <%= image_tag "devil_clock.png", id: "devil-clock", class: "opacity-50 w-full absolute hidden" %>
+  <%= image_tag "light_clock.png", id: "light-clock", class: "opacity-50 w-full absolute hidden" %>
+  <div class="absolute m-8">
+    <div class="text-5xl md:text-7xl backdrop-blur">PomodoroTimer</div>
+    <div class="text-xl md:text-3xl  backdrop-blur">今までにない学習効率をあなたに</div>
+    <div class="m-10 my-20">
+      <div class="my-2 ml-8 countdown font-mono text-6xl">
+        <span id="minutes" style="--value:25;"></span>:<span id="seconds" style="--value:0;"></span>
+      </div>
+      <div class="">
+        <div class="btn btn-secondary", id="start">Start</div>
+        <div class="btn btn-secondary", id="pause">Pause</div>
+        <div class="btn btn-primary", id="reset">Reset</div>
+      </div>
+    </div>
+    <div class="border backdrop-blur">
+      <div class="form-control border-b">
+        <label class="label cursor-pointer">
+          <span class="text-xl label-text">通常</span> 
+          <input id="speed-1x" type="radio" name="radio-10" class="radio checked:bg-red-500" checked />
+        </label>
+      </div>
+      <div class="form-controll border-b">
+        <label class="label cursor-pointer">
+          <span class="text-xl label-text">二倍の学習効率</span> 
+          <input id="speed-2x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+        </label>
+      </div>
+      <div class="form-controll border-b">
+        <label class="label cursor-pointer">
+          <span class="text-xl label-text">三倍の学習効率</span> 
+          <input id="speed-3x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="text-xl label-text">限界を超えた学習効率</span> 
+          <input id="speed-10x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+        </label>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="form-control">
-  <label class="label cursor-pointer">
-    <span class="label-text">二倍の効率</span> 
-    <input id="speed-2x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
-  </label>
-</div>
-<div class="form-control">
-  <label class="label cursor-pointer">
-    <span class="label-text">三倍の効率</span> 
-    <input id="speed-3x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
-  </label>
-</div>
-<div class="form-control">
-  <label class="label cursor-pointer">
-    <span class="label-text">限界突破</span> 
-    <input id="speed-10x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
-  </label>
-</div>
-
-
-<div class="countdown font-mono text-6xl">
-  <span id="minutes" style="--value:25;"></span>:<span id="seconds" style="--value:0;"></span>
-</div>
-
 <audio id="alarm-sound" src="<%= asset_path 'alarm.mp3' %>" preload="auto"></audio>
-
-<div class="btn btn-secondary", id="start">Start</div>
-<div class="btn btn-secondary", id="pause">Pause</div>
-<div class="btn btn-primary", id="reset">Reset</div>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let timeLeft = 1500;
@@ -41,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let timerId = null;
   let speed = 1;
   let workSpeed = 1;
+  let studyTime = 0; 
 
   function playAlarm() {
   let alarm = document.getElementById('alarm-sound');
@@ -55,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       playAlarm();
       isBreak = !isBreak;
       if (isBreak) {
+        studyTime += 25;
         speed = 1;
       } else {
         speed = workSpeed;
@@ -107,5 +119,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   displayTime();
+});
+
+//ここから背景切り替え
+document.querySelectorAll('input[name="radio-10"]').forEach((input) => {
+  input.addEventListener('change', (event) => {
+    // 選択されたラジオボタンのIDを取得します
+    const selectedId = event.target.id;
+    // すべての画像を非表示にします
+    document.getElementById('normal-clock').classList.add('hidden');
+    document.getElementById('devil-clock').classList.add('hidden');
+    document.getElementById('light-clock').classList.add('hidden');
+    // 選択されたラジオボタンに応じて画像を表示します
+    switch (selectedId) {
+      case 'speed-1x':
+      case 'speed-2x':
+        document.getElementById('normal-clock').classList.remove('hidden');
+        break;
+      case 'speed-3x':
+        document.getElementById('devil-clock').classList.remove('hidden');
+        break;
+      case 'speed-10x':
+        document.getElementById('light-clock').classList.remove('hidden');
+        break;
+    }
+  });
 });
 </script>
