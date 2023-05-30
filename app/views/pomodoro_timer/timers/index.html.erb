@@ -1,41 +1,39 @@
-<div class="min-h-screen", data-theme="retro">
-<%= render 'shared/header' %>
-  <div class="form-control">
-    <label class="label cursor-pointer">
-      <span class="label-text">通常速度</span> 
-      <input id="speed-1x" type="radio" name="radio-10" class="radio checked:bg-red-500" checked />
-    </label>
-  </div>
-  <div class="form-control">
-    <label class="label cursor-pointer">
-      <span class="label-text">二倍の効率</span> 
-      <input id="speed-2x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
-    </label>
-  </div>
-  <div class="form-control">
-    <label class="label cursor-pointer">
-      <span class="label-text">三倍の効率</span> 
-      <input id="speed-3x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
-    </label>
-  </div>
-  <div class="form-control">
-    <label class="label cursor-pointer">
-      <span class="label-text">限界突破</span> 
-      <input id="speed-10x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
-    </label>
-  </div>
-
-  <div class="countdown font-mono text-6xl">
-    <span id="minutes" style="--value:25;"></span>:<span id="seconds" style="--value:0;"></span>
-  </div>
-  
-  <audio id="alarm-sound" src="<%= asset_path 'alarm.mp3' %>" preload="auto"></audio>
-
-  <div class="btn btn-secondary", id="start">Start</div>
-  <div class="btn btn-secondary", id="pause">Pause</div>
-  <div class="btn btn-primary", id="reset">Reset</div>
-
+<div class="form-control">
+  <label class="label cursor-pointer">
+    <span class="label-text">通常速度</span> 
+    <input id="speed-1x" type="radio" name="radio-10" class="radio checked:bg-red-500" checked />
+  </label>
 </div>
+<div class="form-control">
+  <label class="label cursor-pointer">
+    <span class="label-text">二倍の効率</span> 
+    <input id="speed-2x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+  </label>
+</div>
+<div class="form-control">
+  <label class="label cursor-pointer">
+    <span class="label-text">三倍の効率</span> 
+    <input id="speed-3x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+  </label>
+</div>
+<div class="form-control">
+  <label class="label cursor-pointer">
+    <span class="label-text">限界突破</span> 
+    <input id="speed-10x" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+  </label>
+</div>
+
+
+<div class="countdown font-mono text-6xl">
+  <span id="minutes" style="--value:25;"></span>:<span id="seconds" style="--value:0;"></span>
+</div>
+
+<audio id="alarm-sound" src="<%= asset_path 'alarm.mp3' %>" preload="auto"></audio>
+
+<div class="btn btn-secondary", id="start">Start</div>
+<div class="btn btn-secondary", id="pause">Pause</div>
+<div class="btn btn-primary", id="reset">Reset</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let timeLeft = 1500;
