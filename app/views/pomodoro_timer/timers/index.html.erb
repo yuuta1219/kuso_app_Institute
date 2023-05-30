@@ -41,6 +41,7 @@
         </label>
       </div>
     </div>
+    <div id="elapsed-time" class="font-mono text-xl">合計学習時間 00:00</div>
   </div>
 </div>
 <audio id="alarm-sound" src="<%= asset_path 'alarm.mp3' %>" preload="auto"></audio>
@@ -52,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let speed = 1;
   let workSpeed = 1;
   let studyTime = 0; 
+
+  let elapsedTimeElement = document.getElementById('elapsed-time');
 
   function playAlarm() {
   let alarm = document.getElementById('alarm-sound');
@@ -67,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
       isBreak = !isBreak;
       if (isBreak) {
         studyTime += 25;
+        let minutes = Math.floor(studyTime / 60);
+        let seconds = studyTime % 60;
+        elapsedTimeElement.textContent = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
         speed = 1;
       } else {
         speed = workSpeed;
