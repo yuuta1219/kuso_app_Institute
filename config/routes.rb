@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'calorie_counter/chats#index'
+  root 'tops#top'
 
   get 'prison', to: 'calorie_counter/chats#prison'
   get 'purgatory', to: 'calorie_counter/chats#purgatory'
@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   namespace :calorie_counter do
     resources :chats
+  end
+  namespace :pomodoro_timer do
+    resources :timers
   end
   resources :users
 end
