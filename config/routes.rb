@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'tops#top'
 
+  get 'saikyouni_omoroi_app', to:'tops#saikyouni_omoroi_app'
+
   get 'prison', to: 'calorie_counter/chats#prison'
   get 'purgatory', to: 'calorie_counter/chats#purgatory'
   get '/path/to/mercy', to: 'calorie_counter/chats#mercy'
@@ -16,5 +18,4 @@ Rails.application.routes.draw do
     resources :timers
   end
   resources :users
-  resources :omoroiapps
 end
