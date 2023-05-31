@@ -16,4 +16,5 @@ Rails.application.routes.draw do
     resources :timers
   end
   resources :users
+  resources :omoroiapps
 end
