@@ -1,0 +1,2 @@
+class OmoroiappsController < ApplicationController
+end
