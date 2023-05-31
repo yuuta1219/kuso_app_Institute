@@ -1,5 +1,5 @@
 class TopsController < ApplicationController
   def top
-    @theme_color = "night"
+    @theme_color = "winter"
   end
 end

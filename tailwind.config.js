@@ -49,6 +49,6 @@ module.exports = {
     require('tailwindcss-hero-patterns'),
   ],
   daisyui: { 
-    themes: ["luxury","synthwave","retro","night"],
+    themes: ["luxury","synthwave","retro","night","winter"],
   },
 }
