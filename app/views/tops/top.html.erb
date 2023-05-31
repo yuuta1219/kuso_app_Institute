@@ -1,3 +1,8 @@
-<div class="text-9xl">研究所へようこそ
-<%= link_to "カロリーカウンターAIへ",calorie_counter_chats_path, class: "btn btn-ghost normal-case text-xl", data: { turbo: false }   %>
-<%= link_to "最強のポモドーロタイマーへ",pomodoro_timer_timers_path, class: "btn btn-ghost normal-case text-xl", data: { turbo: false }  %>
+<div class="min-h-screen heropattern-floatingcogs-gray-200 pt-10">
+  <div class="text-9xl mt-10">研究所へようこそ</div>
+  <div class="flex flex-col m-20">
+    <%= link_to "カロリーカウンターAIへ",calorie_counter_chats_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }   %>
+    <%= link_to "ポモドーロタイマーへ",pomodoro_timer_timers_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }  %>
+    <%= link_to "最強に面白いアプリへ",saikyouni_omoroi_app_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }  %>
+  </div>
+</div>
