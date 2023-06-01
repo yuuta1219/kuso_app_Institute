@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   get 'logout', to: 'user_sessions#destroy'
 
+  post 'select_theme', to: 'themes#select'
+
+
   namespace :calorie_counter do
     resources :chats
   end
