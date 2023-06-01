@@ -1,11 +1,9 @@
 class ThemesController < ApplicationController
   def select
-    beybug
-    theme = ThemeChecker.check_theme(params[:theme])
-    byebug
+    theme = ThemeChecker.check_theme(params[:selectedTheme])
     if theme
-      cookies[:theme] = theme
-      @theme_color = theme
+      cookies.permanent[:selectedTheme] = theme
+      redirect_to request.referer
     else
       redirect_to root_path
     end

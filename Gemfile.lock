@@ -71,6 +71,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     concurrent-ruby (1.2.2)
     config (4.2.0)
       deep_merge (~> 1.2, >= 1.2.1)
@@ -261,6 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  byebug
   config
   cssbundling-rails
   debug

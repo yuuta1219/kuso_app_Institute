@@ -1,14 +1,39 @@
-<div class="min-h-screen heropattern-floatingcogs-gray-200 pt-10">
-
-<%= form_with url: select_theme_path, method: :post, local: true do %>
-  <%= select_tag :theme, options_for_select(ThemeChecker::ALLOWED_WORDS), include_blank: true %>
-  <%= submit_tag "Apply theme" %>
-<% end %>
-
-  <div class="text-9xl mt-10">研究所へようこそ</div>
+<div class="min-h-screen heropattern-floatingcogs-gray-400 pt-10">
+  <div class="text-9xl mt-10 backdrop-blur">研究所へようこそ</div>
   <div class="flex flex-col m-20">
     <%= link_to "カロリーカウンターAIへ",calorie_counter_chats_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }   %>
     <%= link_to "ポモドーロタイマーへ",pomodoro_timer_timers_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }  %>
     <%= link_to "最強に面白いアプリへ",saikyouni_omoroi_app_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }  %>
   </div>
 </div>
+
+
+<script>
+let body = document.getElementById('theme-body');
+let toggle = document.getElementById('themeToggle');
+
+
+// ページ読み込み時に保存されたテーマを復元する
+window.addEventListener('DOMContentLoaded', function() {
+  if (document.cookie.indexOf('selectedTheme=light') >= 0) {
+    toggle.checked = true;
+  } else {
+    toggle.checked = false;
+  }
+});
+
+// チェックボックスの状態が変わったときにテーマを切り替える
+toggle.addEventListener('change', function() {
+  let date = new Date();
+  date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1年後に有効期限を設定
+  let expires = "; expires=" + date.toUTCString();
+
+  if (this.checked) {
+    body.setAttribute('data-theme', 'light');
+    document.cookie = 'selectedTheme=light' + expires + '; path=/'; // テーマをクッキーに保存
+  } else {
+    body.setAttribute('data-theme', 'night');
+    document.cookie = 'selectedTheme=night' + expires + '; path=/'; // テーマをクッキーに保存
+  }
+});
+</script>
