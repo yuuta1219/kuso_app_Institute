@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'tops#top'
 
+  get 'terms', to: 'tops#terms'
+  get 'privacy_policy', to: 'tops#privacy_policy'
+  get 'treatment', to: 'tops#treatment'
+
   get 'saikyouni_omoroi_app', to:'tops#saikyouni_omoroi_app'
 
   get 'prison', to: 'calorie_counter/chats#prison'
