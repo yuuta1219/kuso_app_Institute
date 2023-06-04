@@ -64,9 +64,9 @@ group :development do
   # gem "spring"
 end
 
-gem 'cssbundling-rails'
+gem "cssbundling-rails"
 gem "ruby-openai"
-gem 'config'
-gem 'sorcery'
-gem 'byebug'
-gem 'vite_rails'
+gem "config"
+gem "sorcery"
+gem "byebug"
+gem "vite_rails"
