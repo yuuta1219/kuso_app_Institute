@@ -3,6 +3,7 @@ class TopsController < ApplicationController
   
   def top
     @color_select = "approval"
+    @hidden = "hidden"
   end
 
   def terms; end
