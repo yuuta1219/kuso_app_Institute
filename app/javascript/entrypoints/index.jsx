@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../components/App';
+import Top from '../components/TOp';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <Top />
     </React.StrictMode>,
     document.getElementById('root')
   );
