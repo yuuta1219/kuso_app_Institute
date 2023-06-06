@@ -19,18 +19,12 @@
 let body = document.getElementById('theme-body');
 let toggle = document.getElementById('themeToggle');
 let themes = ["dark","synthwave","cyberpunk","valentine","halloween","forest","aqua","black","dracula","night"];
-let heropattern = document.getElementById('heropattern');
 
 window.addEventListener('DOMContentLoaded', function() {
   if (document.cookie.indexOf('selectedTheme=light') >= 0) {
     toggle.checked = true;
-    heropattern.classList.remove('heropattern-floatingcogs-gray-600');
-    heropattern.classList.add('heropattern-floatingcogs-gray-200');
   } else {
     toggle.checked = false;
-    heropattern.classList.remove('heropattern-floatingcogs-gray-200');
-    heropattern.classList.add('heropattern-floatingcogs-gray-600');
-
   }
 });
 
@@ -39,19 +33,14 @@ toggle.addEventListener('change', function() {
   date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
   let expires = "; expires=" + date.toUTCString();
 
-  // Select a random theme from the themes array.
   let theme = themes[Math.floor(Math.random() * themes.length)];
 
   if (this.checked) {
     body.setAttribute('data-theme', 'light');
     document.cookie = 'selectedTheme=light' + expires + '; path=/';
-    heropattern.classList.remove('heropattern-floatingcogs-gray-600');
-    heropattern.classList.add('heropattern-floatingcogs-gray-200');
   } else {
     body.setAttribute('data-theme', theme);
     document.cookie = 'selectedTheme=' + theme + expires + '; path=/';
-    heropattern.classList.remove('heropattern-floatingcogs-gray-200');
-    heropattern.classList.add('heropattern-floatingcogs-gray-600');
   }
 });
 </script>
