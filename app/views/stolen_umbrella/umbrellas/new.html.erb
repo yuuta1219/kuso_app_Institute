@@ -1,0 +1,20 @@
+<%= form_with(model: @umbrella, local: true) do |form| %>
+  <div>
+    <%= form.label :title, 'タイトル' %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :memory, '傘との思い出' %><br>
+    <%= form.text_area :memory %>
+  </div>
+
+  <div>
+    <%= form.label :stolen_place, '盗まれた場所' %><br>
+    <%= form.text_field :stolen_place %>
+  </div>
+
+  <div>
+    <%= form.submit '作成する' %>
+  </div>
+<% end %>
