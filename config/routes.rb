@@ -21,9 +21,13 @@ Rails.application.routes.draw do
   namespace :calorie_counter do
     resources :chats
   end
+
   namespace :pomodoro_timer do
     resources :timers
   end
+
+  get '/stolen_umbrella', to: 'stolen_umbrella/umbrellas#top'
+  
   namespace :stolen_umbrella do
     resources :umbrellas
   end
