@@ -8,7 +8,7 @@ class StolenUmbrella::UmbrellasController < StolenUmbrella::BaseController
     end
 
     def create
-      @umbrella = Umbrella.new(umbrella_params)
+      @umbrella = current_user.umbrellas.build(umbrella_params)
   
       if @umbrella.save
         redirect_to stolen_umbrella_umbrellas_path, notice: 'Umbrella was successfully created.'
