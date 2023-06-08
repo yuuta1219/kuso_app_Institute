@@ -1,0 +1,2 @@
+module StolenUmbrella::UmbrellasHelper
+end

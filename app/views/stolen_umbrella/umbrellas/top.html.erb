@@ -1,0 +1,11 @@
+<div class="font-umbrella min-h-screen relative overflow-hidden">
+  <%= image_tag "ame.jpg", class: "contrast-50 md:hidden w-full h-full object-cover md:w-full md:h-auto absolute"%>
+  <%= image_tag "ame3.jpg", class: "contrast-50 hidden md:block w-full h-full object-cover md:w-full md:h-auto absolute"%>
+  <div class="mt-10 mr-2 md:mt-8 md:mr-8 text-4xl text-white tracking-widest [writing-mode:vertical-rl] [line-height:3rem] md:[line-height:6rem] absolute right-0 md:text-7xl">
+    あの日消えた<br>
+    <span class="pt-6 md:pt-8">傘の行方を</span><br><span class="pt-6 md:pt-8">僕達はまだ</span><br><span class="pt-2">　知らない。</span>
+  </div>
+  <div class="mb-40 absolute inset-x-0 md:right-0 bottom-20 flex justify-center">
+    <%= link_to '傘と人々の思い出を見る', stolen_umbrella_umbrellas_path, class: 'md:btn-lg btn btn-primary' %>
+  </div>
+</div>
