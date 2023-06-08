@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: clinqk4gm00d79tp51w1p9a58
+  username: clinqk4gl00d59tp5f8vjdy4h
+  password: <%= ENV['KUSOAPP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
