@@ -1,1 +1,12 @@
-<div><%= umbrella.title %></div>
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure class="px-10 pt-10">
+    <%= image_tag("kasa.jpg", alt: "kasa", class:"rounded-xl") %>
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title"><%= umbrella.title %></h2>
+    <p><%= umbrella.memory %></p>
+    <div class="card-actions">
+      盗まれた場所「<%= umbrella.stolen_place %>」
+    </div>
+  </div>
+</div>

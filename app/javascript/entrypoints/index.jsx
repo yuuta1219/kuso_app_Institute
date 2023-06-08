@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Top from '../components/TOp';
+import Top from '../components/Top';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
