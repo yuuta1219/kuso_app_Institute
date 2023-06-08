@@ -24,5 +24,8 @@ Rails.application.routes.draw do
   namespace :pomodoro_timer do
     resources :timers
   end
+  namespace :stolen_umbrella do
+    resources :umbrellas
+  end
   resources :users
 end
