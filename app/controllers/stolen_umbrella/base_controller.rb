@@ -4,6 +4,6 @@ class StolenUmbrella::BaseController < ApplicationController
   private
 
   def calorie_theme_color
-    @theme_color = "cupcake"
+    @theme_color = "pastel"
   end
 end
