@@ -1,8 +1,28 @@
-<%= link_to '新規作成', new_stolen_umbrella_umbrella_path, class: 'button' %>
-
-<div class="overflow-x-auto flex">
-  <%= render @umbrellas %>
-  
+<div class="font-umbrella min-h-screen relative overflow-hidden">
+  <%= image_tag "ame2.jpg", class: "md:block w-full h-full object-cover md:w-full md:h-auto absolute"%>
+  <div class="z-20 mt-10 mr-2 md:mt-8 md:mr-8 text-4xl tracking-widest [writing-mode:vertical-rl] [line-height:3rem] md:[line-height:6rem] absolute right-0 md:text-7xl">
+    あの日見た<br>傘の行方を<br>僕達はまだ<br><span class="pt-8 md:pt-12">知らない。</span> 
+  </div>
+  <div class="z-10 absolute right-14 top-6 md:right-32 md:top-2 md:text-7xl text-4xl text-blue-400">☂️</div>
+  <div class="mb-40 absolute inset-x-0 md:right-0 bottom-20 flex justify-center">
+    <label for="my-modal-1" class="btn btn-ghost btn-sm">傘と人々の思い出を綴る</label>
+  </div>
 </div>
+
+<input type="checkbox" id="my-modal-1" class="modal-toggle" />
+<label for="my-modal-1" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <label for="my-modal-1" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <%= form_with model: [:stolen_umbrella, @umbrella], local: true do |f| %>
+      <div>
+        <%= f.label :memory, '傘との思い出' %><br>
+        <%= f.text_area :memory %>
+      </div>
+      <div>
+        <%= f.submit '投稿する' %>
+      </div>
+    <% end %>    
+  </label>
+</label>
 
   

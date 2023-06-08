@@ -26,8 +26,6 @@ Rails.application.routes.draw do
     resources :timers
   end
 
-  get '/stolen_umbrella', to: 'stolen_umbrella/umbrellas#top'
-  
   namespace :stolen_umbrella do
     resources :umbrellas
   end
