@@ -1,4 +1,49 @@
-  <%= render @umbrellas %>
-  <%= link_to '新規作成', new_stolen_umbrella_umbrella_path, class: 'button' %>
+<div class="font-umbrella min-h-screen relative overflow-hidden">
+  <%= image_tag "ame2.jpg", class: "md:block w-full h-full object-cover md:w-full md:h-auto absolute"%>
+  <div class="z-50 mt-10 mr-2 md:mt-8 md:mr-8 text-4xl tracking-widest [writing-mode:vertical-rl] [line-height:3rem] md:[line-height:6rem] absolute right-0 md:text-7xl">
+    あの日見た<br>傘の行方を<br>僕達はまだ<br><span class="pt-8 md:pt-12">知らない。</span> 
+  </div>
+  <div class="z-10 absolute right-14 top-6 md:right-32 md:top-2 md:text-7xl text-4xl text-blue-400">☂️</div>
+  <div class="mb-40 absolute inset-x-0 md:right-0 bottom-20 flex justify-center">
+    <label for="my-modal-1" class="z-50 btn">傘との思い出を綴る</label>
+  </div>
+  <div class="overflow-hidden">
+    <%= render @umbrellas %>
+  </div>
+</div>
 
-  
+<input type="checkbox" id="my-modal-1" class="modal-toggle" />
+<label for="my-modal-1" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <label for="my-modal-1" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="text-xl m-2 mb-4 border-b border-gray-500">傘との思い出を綴る</div>
+    <%= form_with model: [:stolen_umbrella, @umbrella], local: true do |f| %>
+      <div>
+        <%= f.text_area :memory, class: "textarea textarea-info w-full h-40" %>
+      </div>
+      <div>
+        <%= f.submit '投稿する' %>
+      </div>
+    <% end %>    
+  </label>
+</label>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let memories = document.querySelectorAll('.memory');
+  memories.forEach(memory => {
+    memory.style.top = Math.random() * window.innerHeight + 'px';
+    memory.style.left = Math.random() * window.innerWidth + 'px';
+
+    let animationDuration = Math.random() * 10 + 3;
+    memory.style.animationDuration = animationDuration + 's';
+
+    memory.addEventListener('animationend', () => {
+      memory.style.top = Math.random() * window.innerHeight + 'px';
+      memory.style.left = Math.random() * window.innerWidth + 'px';
+      memory.style.animationDuration = Math.random() * 4 + 3 + 's';
+    });
+  });
+});
+</script>
+
