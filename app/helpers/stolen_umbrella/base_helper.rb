@@ -1,0 +1,2 @@
+module StolenUmbrella::BaseHelper
+end
