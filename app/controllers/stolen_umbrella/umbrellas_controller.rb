@@ -41,6 +41,6 @@ class StolenUmbrella::UmbrellasController < StolenUmbrella::BaseController
     private
   
     def umbrella_params
-      params.require(:umbrella).permit(:title, :memory, :stolen_place, :user_id)
+      params.require(:umbrella).permit(:title, :memory, :stolen_place)
     end
 end
