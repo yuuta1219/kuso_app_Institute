@@ -1,2 +1,2 @@
-class StolenUmbrella::UmbrellasController < ApplicationController
+class StolenUmbrella::UmbrellasController < StolenUmbrella::BaseController
 end
