@@ -1,3 +1,13 @@
-<div id="memory-<%= umbrella.id %>" class="z-10 absolute animate-fall drop-shadow-2xl text-blue-800 [writing-mode:vertical-rl] memory truncate md:text-2xl">
-  <%= umbrella.memory %>
+<div id="memory-<%= umbrella.id %>" class="z-10 absolute animate-fall drop-shadow-2xl text-blue-800 vertical memory truncate md:text-2xl">
+  <label for="my-modal-<%= umbrella.id %>"><%= umbrella.memory %></label>
 </div>
+
+
+<input type="checkbox" id="my-modal-<%= umbrella.id %>" class="modal-toggle" />
+<label for="my-modal-<%= umbrella.id %>" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <label for="my-modal-<%= umbrella.id %>" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="text-xl m-2 mb-4 border-b border-gray-500">誰かの傘との思い出</div>  
+    <%= umbrella.memory %>
+  </label>
+</label>

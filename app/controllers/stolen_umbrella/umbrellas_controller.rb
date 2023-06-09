@@ -1,7 +1,7 @@
 class StolenUmbrella::UmbrellasController < StolenUmbrella::BaseController
 
   def index
-    @umbrellas = Umbrella.all
+    @umbrellas = Umbrella.order(created_at: :desc).limit(30)
     @umbrella = Umbrella.new
   end
 
