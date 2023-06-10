@@ -8,8 +8,8 @@ function Aitask() {
   return (
     <Router>
       <Routes>
-        <Route path="/post" element={<HomePage />} />
-        <Route path="/post/about" element={<AboutPage />} />
+        <Route path="/aidoji" element={<HomePage />} />
+        <Route path="/aidoji/index" element={<AboutPage />} />
       </Routes>
     </Router>
   );
