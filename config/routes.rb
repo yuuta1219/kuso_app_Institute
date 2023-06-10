@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   post 'select_theme', to: 'themes#select'
 
+  get 'aidoji', to:'aidoji/tasks#top'
 
   namespace :calorie_counter do
     resources :chats
