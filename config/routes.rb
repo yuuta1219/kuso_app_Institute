@@ -31,5 +31,10 @@ Rails.application.routes.draw do
   namespace :stolen_umbrella do
     resources :umbrellas
   end
+
+  namespace :aidoji do
+    resources :tasks
+  end
+
   resources :users
 end
