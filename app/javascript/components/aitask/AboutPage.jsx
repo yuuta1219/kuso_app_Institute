@@ -66,14 +66,15 @@ function AboutPage() {
           value={formData.name}
           onChange={handleChange}
         />
+        <br></br>
         <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
         />
-        {/* 他のフィールド */}
-        <button type="submit">Submit</button>
+        <br></br>
+        <button className="btn" type="submit">Submit</button>
       </form>
     </div>
   );
