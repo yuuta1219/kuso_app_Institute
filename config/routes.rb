@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'privacy_policy', to: 'tops#privacy_policy'
   get 'treatment', to: 'tops#treatment'
 
+  get 'post', to: 'tops#post'
+
   get 'saikyouni_omoroi_app', to:'tops#saikyouni_omoroi_app'
 
   get 'prison', to: 'calorie_counter/chats#prison'
