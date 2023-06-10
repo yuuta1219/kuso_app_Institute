@@ -74,7 +74,7 @@ function AboutPage() {
           onChange={handleChange}
         />
         <br></br>
-        <button className="btn" type="submit">Submit</button>
+        <button className="btn btn-accent" type="submit">Submit</button>
       </form>
     </div>
   );

@@ -78,6 +78,20 @@ module.exports = {
     require('tailwindcss-hero-patterns'),
   ],
   daisyui: { 
-    themes: ["light","dark","cupcake","bumblebee","emerald","corporate","synthwave","retro","cyberpunk","valentine","halloween","garden","forest","aqua","lofi","pastel","fantasy","wireframe","black","luxury","dracula","cmyk","autumn","business","acid","lemonade","night","coffee","winter"],
+    themes: ["light","dark","cupcake","bumblebee","emerald","corporate","synthwave","retro","cyberpunk","valentine","halloween","garden","forest","aqua","lofi","pastel","fantasy","wireframe","black","luxury","dracula","cmyk","autumn","business","acid","lemonade","night","coffee","winter",
+      {
+        aespa: {      
+          "primary": "#1f0d4d",
+          "secondary": "#363784",
+          "accent": "#D2DBE0",
+          "neutral": "#272626",
+          "base-100": "#000000",
+          "info": "#0000ff",
+          "success": "#008000",
+          "warning": "#ffff00",
+          "error": "#ff0000",
+        },
+      },
+    ],
   },
 }

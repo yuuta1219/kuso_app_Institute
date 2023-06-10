@@ -4,6 +4,6 @@ class Aidoji::BaseController < ApplicationController
   private
 
   def calorie_theme_color
-    @theme_color = "valentine"
+    @theme_color = "aespa"
   end
 end
