@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Top from '../components/Top';
+import Aitask from '../components/aitask/Aitask';
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("aitask");
   ReactDOM.render(
     <React.StrictMode>
-      <Top />
+      <Aitask />
     </React.StrictMode>,
     document.getElementById('root')
   );

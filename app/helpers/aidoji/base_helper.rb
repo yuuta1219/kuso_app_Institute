@@ -1,0 +1,2 @@
+module Aidoji::BaseHelper
+end

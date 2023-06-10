@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'privacy_policy', to: 'tops#privacy_policy'
   get 'treatment', to: 'tops#treatment'
 
+  get 'post', to: 'tops#post'
+
   get 'saikyouni_omoroi_app', to:'tops#saikyouni_omoroi_app'
 
   get 'prison', to: 'calorie_counter/chats#prison'
@@ -17,6 +19,10 @@ Rails.application.routes.draw do
 
   post 'select_theme', to: 'themes#select'
 
+  get 'aitask', to:'aidoji/tasks#top'
+  get 'aitask/*path', to: 'aidoji/tasks#top', constraints: ->(request) do
+  !request.xhr? && request.format.html?
+end
 
   namespace :calorie_counter do
     resources :chats
@@ -29,5 +35,10 @@ Rails.application.routes.draw do
   namespace :stolen_umbrella do
     resources :umbrellas
   end
+
+  namespace :aidoji do
+    resources :tasks
+  end
+
   resources :users
 end
