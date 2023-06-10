@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
-    <div>
+    <div className='min-h-screen '>
       Hello, from Home!
-      <Link to="/post/about">
-        <button>Go to About</button>
+      <Link to="/aidoji/new">
+        <button>Go to New</button>
       </Link>
     </div>
   );

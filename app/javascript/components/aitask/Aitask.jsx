@@ -9,7 +9,7 @@ function Aitask() {
     <Router>
       <Routes>
         <Route path="/aidoji" element={<HomePage />} />
-        <Route path="/aidoji/index" element={<AboutPage />} />
+        <Route path="/aidoji/new" element={<AboutPage />} />
       </Routes>
     </Router>
   );

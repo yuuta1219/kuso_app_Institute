@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 function AboutPage() {
   return (
-    <div>
+    <div className='min-h-screen '>
       Hello, from About!
-      <Link to="/post">
+      <Link to="/aidoji">
         <button>Go to Home</button>
       </Link>
     </div>
