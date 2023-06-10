@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div className='min-h-screen '>
       Hello, from Home!
-      <Link to="/aidoji/new">
+      <Link to="/aitask/new">
         <button>Go to New</button>
       </Link>
     </div>

@@ -19,7 +19,10 @@ Rails.application.routes.draw do
 
   post 'select_theme', to: 'themes#select'
 
-  get 'aidoji', to:'aidoji/tasks#top'
+  get 'aitask', to:'aidoji/tasks#top'
+  get 'aitask/*path', to: 'aidoji/tasks#top', constraints: ->(request) do
+  !request.xhr? && request.format.html?
+end
 
   namespace :calorie_counter do
     resources :chats
