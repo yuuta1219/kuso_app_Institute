@@ -73,3 +73,4 @@ gem "ruby-openai"
 gem "config"
 gem "sorcery"
 gem "byebug"
+gem 'rails-i18n'

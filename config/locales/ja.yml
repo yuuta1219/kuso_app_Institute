@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        umbrella:
+          attributes:
+            memory:
+              blank: "は必ず入力してください"
+    attributes:
+      umbrella:
+        memory: "傘との思い出"
