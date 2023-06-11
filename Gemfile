@@ -74,3 +74,4 @@ gem "config"
 gem "sorcery"
 gem "byebug"
 gem "vite_rails"
+gem 'rails-i18n'
