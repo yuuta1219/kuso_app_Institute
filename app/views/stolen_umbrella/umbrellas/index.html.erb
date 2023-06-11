@@ -21,6 +21,7 @@
   <label class="modal-box relative" for="">
     <label for="my-modal-0" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
     <div class="text-xl m-2 mb-4 border-b border-gray-500">盗まれた傘との思い出を綴る</div>
+    <div id="error_messages"></div>
     <%= form_with model: [:stolen_umbrella, @umbrella], local: true do |f| %>
       <div>
         <%= f.text_area :memory, class: "textarea textarea-info w-full h-40" %>
@@ -33,7 +34,7 @@
 </label>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbo:load', function() {
   let memories = document.querySelectorAll('.memory');
   memories.forEach(memory => {
     memory.style.top = Math.random() * window.innerHeight + 'px';
