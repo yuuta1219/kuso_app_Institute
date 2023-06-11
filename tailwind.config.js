@@ -12,7 +12,8 @@ module.exports = {
         kawaii: ['Yomogi', 'cursive'],
         umbrella: ['Noto Serif JP', 'serif'],
         robo: ['DotGothic16', 'sans-serif'],
-        sawarabi: ['Sawarabi Mincho', 'serif']
+        sawarabi: ['Sawarabi Mincho', 'serif'],
+        aidoji: ['M PLUS Rounded 1c', 'sans-serif']
       },
       animation: {
         "slide-rotate-hor-b-fwd": "slide-rotate-hor-b-fwd 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)   both",
