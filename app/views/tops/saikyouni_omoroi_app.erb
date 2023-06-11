@@ -1,10 +1,4 @@
-<%= image_tag "omosiroi.png", class: "w-full" %>
-<input type="checkbox" id="my-modal" class="modal-toggle" checked />
-<div class="modal backdrop-blur">
-  <div class="modal-box">
-    <div class="text-4xl m-2 mb-4 border-b border-gray-500">Sorry..</div>
-    <p class="py-6 m-2 hidden md:block ">申し訳ありません。<br>このコンテンツはスマートフォン専用となっております。</p>
-    <p class="py-6 m-2 md:hidden">申し訳ありません。<br>このコンテンツはパソコンブラウザ専用となっております。</p>
-    <%= link_to "トップページへ戻る",root_path, class: "btn btn-ghost normal-case text", data: { turbo: false }  %>
-  </div>
+<div data-controller="text-changer">
+  <div data-text-changer-target="display">flex編</div>
+  <button data-action="text-changer#startChanging" class="btn">スタート！</button>
 </div>
