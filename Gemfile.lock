@@ -129,6 +129,9 @@ GEM
     hashie (5.0.0)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.1.6)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.6.0)
     irb (1.6.4)
       reline (>= 0.3.0)
@@ -206,6 +209,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rails-i18n (7.0.7)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.5)
       actionpack (= 7.0.5)
       activesupport (= 7.0.5)
@@ -274,10 +280,12 @@ DEPENDENCIES
   config
   cssbundling-rails
   debug
+  importmap-rails
   jbuilder
   pg
   puma (~> 5.0)
   rails (~> 7.0.5)
+  rails-i18n
   ruby-openai
   sorcery
   sprockets-rails
