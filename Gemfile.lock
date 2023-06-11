@@ -129,6 +129,9 @@ GEM
     hashie (5.0.0)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.1.6)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.6.0)
     irb (1.6.4)
       reline (>= 0.3.0)
@@ -274,6 +277,7 @@ DEPENDENCIES
   config
   cssbundling-rails
   debug
+  importmap-rails
   jbuilder
   pg
   puma (~> 5.0)
