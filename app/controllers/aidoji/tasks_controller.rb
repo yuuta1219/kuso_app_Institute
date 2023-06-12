@@ -13,13 +13,14 @@ class Aidoji::TasksController < Aidoji::BaseController
     @task = current_user.tasks.build(task_params)
     if @task.save
       redirect_to aidoji_tasks_path(@task), success: "nice task create"
-    end
+    else
       render turbo_stream: turbo_stream.replace('error_messages', partial: 'shared/error_messages', locals: { object: @task })
+    end
   end
 
   def update
-    @task = current_user.tasks.build(task_params)
-    if @task.save
+    @task = current_user.tasks.find(params[:id])
+    if @task.update(task_params)
       redirect_to aidoji_tasks_path(@task), success: "nice task update"
     else
       render turbo_stream: turbo_stream.replace('error_messages', partial: 'shared/error_messages', locals: { object: @task })
@@ -27,7 +28,7 @@ class Aidoji::TasksController < Aidoji::BaseController
   end
 
   def destroy
-    @task = current_user.tasks.find(@task)
+    @task = current_user.tasks.find(params[:id])
     @task.destroy!
     redirect_to aidoji_tasks_path(@task), success: "nice task destroy"
   end
@@ -39,6 +40,5 @@ class Aidoji::TasksController < Aidoji::BaseController
   end
 
   def aidoji
-    
   end
 end

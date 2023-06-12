@@ -1,0 +1,22 @@
+<label for="my-modal-<%=task.id%>", class="ml-20 bi bi-trash text-6xl hover:animate-pulse animate-bounce hover:cursor-pointer">
+
+<%= task.title %>
+<%= task.body %>
+</label>
+
+
+
+<input type="checkbox" id="my-modal-<%=task.id%>" class="modal-toggle" />
+<label for="my-modal-<%=task.id%>" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <label for="my-modal-<%=task.id%>" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="text-xl font-bold m-2 mb-4 border-b border-gray-500">scene <%= task.title %>カードを削除。</div>
+    <div class="text-sm m-2 my-4">カードのデータを削除しても本当によろしいですか？</br>削除後に元に戻すことはできません。ご了承ください。</div>
+    <%= form_with model: [:aidoji, task], local: true do |f| %>
+      <%= f.text_field :title, class: "input_area input_area-info w-full h-40 " %>
+      <%= f.text_area :body, class: "textarea textarea-info w-full h-40" %>
+      <%= f.submit '更新する' %>
+    <% end %>
+    <%= button_to "カードを削除する",aidoji_task_path(task),class: 'btn text-gray-100 bg-gray-900 m-2 right-0', method: :delete %>
+  </label>
+</label>
