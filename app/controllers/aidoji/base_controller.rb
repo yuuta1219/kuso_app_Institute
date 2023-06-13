@@ -4,6 +4,6 @@ class Aidoji::BaseController < ApplicationController
   private
 
   def aidoji_theme_color
-    @theme_color = "valentine"
+    @theme_color = "cupcake"
   end
 end

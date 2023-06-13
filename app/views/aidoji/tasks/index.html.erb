@@ -10,8 +10,8 @@
       </div>
     <% end %>
   <% else %>
-  <%= render @tasks %>
-      <div id="error_messages"></div>
+    <%= render @tasks %>
+    <div id="error_messages"></div>
     <%= form_with model: [:aidoji, @task], local: true do |f| %>
       <div>
         <%= f.text_field :title, class: "input_area input_area-info w-full h-40 " %>
