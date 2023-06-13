@@ -4,9 +4,8 @@ class CalorieCounter::ChatsController < CalorieCounter::BaseController
   before_action :not_prison, only: [:purgatory]
 
   def index
+    return if params[:input].nil?
     input = CalorieCounter::WordChecker.check_input(params[:input])
-    return if input.nil?
-
     random_number = rand(1..10)
     if random_number != 1
       client = CalorieCounter::OpenAiClient.new
