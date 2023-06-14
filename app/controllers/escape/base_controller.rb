@@ -1,5 +1,6 @@
 class Escape::BaseController < ApplicationController
   before_action :escape_theme_color
+  layout "game_layout"
 
   private
 
