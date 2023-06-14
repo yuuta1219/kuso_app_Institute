@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = ["display"];
-  
+
   connect() {
     this.maxChanges = 7;
     this.reset();
@@ -34,8 +34,8 @@ export default class extends Controller {
         i++;
         this.changeCount++;
       }
-    }, 400); 
-   }
+    }, 400);
+  }
 
   disconnect() {
     this.clearTimer();
