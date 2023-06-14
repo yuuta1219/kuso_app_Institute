@@ -1,2 +1,2 @@
-class Escape::EndrolesController < Escape::BaseController 
+class Escape::EndrolesController < Escape::BaseController
 end
