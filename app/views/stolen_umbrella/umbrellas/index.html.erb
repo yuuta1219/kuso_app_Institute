@@ -1,7 +1,7 @@
 <div class="font-umbrella min-h-screen relative overflow-hidden">
   <%= image_tag "ame2.jpg", class: "md:block w-full h-full object-cover md:w-full md:h-auto absolute"%>
   <div class="z-50 mt-10 mr-2 md:mt-8 md:mr-8 text-4xl tracking-widest vertical [line-height:3rem] md:[line-height:6rem] absolute right-0 md:text-7xl">
-    あの日見た<br>傘の行方を<br>僕達はまだ<br><span class="pt-8 md:pt-12">知らない。</span> 
+    あの日見た<br>傘の行方を<br>僕達はまだ<br><span class="pt-8 md:pt-12">知らない。</span>
   </div>
   <div class="z-10 absolute right-12 top-6 md:right-28 md:top-0 md:text-7xl text-4xl text-blue-400 transform rotate-45">
     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="currentColor">
@@ -9,7 +9,7 @@
     </svg>
   </div>
   <div class="mb-40 absolute inset-x-0 md:right-0 bottom-20 flex justify-center">
-    <label for="my-modal-0" class="z-50 btn btn-active">盗まれた傘との思い出を綴る</label>
+    <label for="my-modal-0" class="z-50 btn btn-neutral">盗まれた傘との思い出を綴る</label>
   </div>
   <div class="overflow-hidden">
     <%= render @umbrellas %>
@@ -29,7 +29,7 @@
       <div>
         <%= f.submit '投稿する' %>
       </div>
-    <% end %>    
+    <% end %>
   </label>
 </label>
 

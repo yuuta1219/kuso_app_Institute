@@ -1,9 +1,9 @@
 class StolenUmbrella::BaseController < ApplicationController
-  before_action :calorie_theme_color
+  before_action :stolen_umbrella_theme_color
 
   private
 
-  def calorie_theme_color
+  def stolen_umbrella_theme_color
     @theme_color = "pastel"
   end
 end
