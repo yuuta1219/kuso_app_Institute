@@ -19,9 +19,43 @@ module.exports = {
         "slide-rotate-hor-b-fwd": "slide-rotate-hor-b-fwd 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)   both",
         "scale-in-hor-center": "scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "color-change-2x": "color-change-2x 2s linear  infinite alternate both",
-        "fall": "fall 5s linear infinite"
+        "fall": "fall 5s linear infinite",
+        "kenburns-top": "kenburns-top 5s ease   both",
+        "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+        "scale-up-hor-center": "scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both"
       },
       keyframes: {
+        "scale-up-hor-center": {
+          "0%": {
+              transform: "scaleX(.4)"
+          },
+          to: {
+              transform: "scaleX(1)"
+          }
+        },
+        "focus-in-expand-fwd": {
+          "0%": {
+              "letter-spacing": "-.5em",
+              transform: "translateZ(-800px)",
+              filter: "blur(12px)",
+              opacity: "0"
+          },
+          to: {
+              transform: "translateZ(0)",
+              filter: "blur(0)",
+              opacity: "1"
+          }
+        },
+        "kenburns-top": {
+          "0%": {
+              transform: "scale(1) translate(0%, 0%)",
+              "transform-origin": ""
+          },
+          to: {
+              transform: "scale(4) translate(2%, 21%)",
+              "transform-origin": ""
+          }
+        },
         "color-change-2x": {
           "0%": {
             background: "#F30100"

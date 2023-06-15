@@ -1,0 +1,2 @@
+module Escape::EndrolesHelper
+end
