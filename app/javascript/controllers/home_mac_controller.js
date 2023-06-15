@@ -11,6 +11,6 @@ export default class extends Controller {
     setTimeout(() => {
       this.macElementTarget.classList.add('hidden');
       this.mocElementTarget.classList.remove('hidden');
-    }, 2000);
+    }, 4000);
   }
 }
