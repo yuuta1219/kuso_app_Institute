@@ -20,9 +20,23 @@ module.exports = {
         "scale-in-hor-center": "scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "color-change-2x": "color-change-2x 2s linear  infinite alternate both",
         "fall": "fall 5s linear infinite",
-        "kenburns-top": "kenburns-top 5s ease   both"
+        "kenburns-top": "kenburns-top 5s ease   both",
+        "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both"
       },
       keyframes: {
+        "focus-in-expand-fwd": {
+          "0%": {
+              "letter-spacing": "-.5em",
+              transform: "translateZ(-800px)",
+              filter: "blur(12px)",
+              opacity: "0"
+          },
+          to: {
+              transform: "translateZ(0)",
+              filter: "blur(0)",
+              opacity: "1"
+          }
+        },
         "kenburns-top": {
           "0%": {
               transform: "scale(1) translate(0%, 0%)",

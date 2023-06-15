@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["macElement", "mocElement"];
+  static targets = ["macElement"];
 
   connect() {
     this.toggleDisplay();
@@ -9,8 +9,7 @@ export default class extends Controller {
 
   toggleDisplay() {
     setTimeout(() => {
-      this.macElementTarget.classList.add('hidden');
-      this.mocElementTarget.classList.remove('hidden');
-    }, 4000);
+      this.macElementTarget.classList.remove('hidden');
+    }, 5000);
   }
 }
