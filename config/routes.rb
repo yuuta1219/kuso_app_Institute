@@ -35,5 +35,12 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
+  namespace :escape do
+    resources :homes
+    resources :sns
+    resources :rooms
+    resources :endroles
+  end
+
   resources :users
 end
