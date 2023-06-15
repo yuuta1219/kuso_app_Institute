@@ -5,7 +5,7 @@ class Escape::BaseController < ApplicationController
   private
 
   def escape_theme_color
-    @theme_color = "light"
+    @theme_color = "aespa"
   end
 
 end

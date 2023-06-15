@@ -21,9 +21,18 @@ module.exports = {
         "color-change-2x": "color-change-2x 2s linear  infinite alternate both",
         "fall": "fall 5s linear infinite",
         "kenburns-top": "kenburns-top 5s ease   both",
-        "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both"
+        "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+        "scale-up-hor-center": "scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both"
       },
       keyframes: {
+        "scale-up-hor-center": {
+          "0%": {
+              transform: "scaleX(.4)"
+          },
+          to: {
+              transform: "scaleX(1)"
+          }
+        },
         "focus-in-expand-fwd": {
           "0%": {
               "letter-spacing": "-.5em",
