@@ -41,15 +41,8 @@ document.addEventListener('turbo:load', function() {
   memories.forEach(memory => {
     memory.style.top = Math.random() * window.innerHeight + 'px';
     memory.style.left = Math.random() * window.innerWidth + 'px';
-
     let animationDuration = Math.random() * 10 + 3;
     memory.style.animationDuration = animationDuration + 's';
-
-    memory.addEventListener('animationend', () => {
-      memory.style.top = Math.random() * window.innerHeight + 'px';
-      memory.style.left = Math.random() * window.innerWidth + 'px';
-      memory.style.animationDuration = Math.random() * 4 + 3 + 's';
-    });
   });
 });
 </script>
