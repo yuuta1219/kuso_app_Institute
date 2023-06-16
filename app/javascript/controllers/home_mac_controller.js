@@ -13,6 +13,6 @@ export default class extends Controller {
     }, 5000);
     setTimeout(() => {
       this.LoginElementTarget.classList.remove('hidden');
-    }, 6000);
+    }, 9400);
   }
 }

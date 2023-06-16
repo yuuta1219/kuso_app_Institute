@@ -1,23 +1,35 @@
-import { Controller } from "stimulus"
+import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = [ "welcome", "escape", "object", "play", "return" ]
 
   connect() {
-    this.outputTarget.textContent = ''
-    const text = 'Hello, Stimulus!'
-    this.typeText(text)
+    // Define your targets, texts, delays, and speeds here
+    const elements = [
+      { target: this.welcomeTarget, text: 'Welcome to', delay: 6000, speed: 50 },
+      { target: this.escapeTarget, text: 'The Escape Game!', delay: 6700, speed: 50 },
+      { target: this.objectTarget, text: 'The objective of this game is to restore a malfunctioning AI to its original state.', delay: 8000, speed: 15 },
+      { target: this.playTarget, text: 'PLAY!', delay: 9600, speed: 30 },
+      { target: this.returnTarget, text: 'RETURN!', delay: 9600, speed: 30 }
+    ]
+
+    for (let element of elements) {
+      element.target.textContent = ''
+      setTimeout(() => {
+        this.typeText(element.target, element.text, element.speed)
+      }, element.delay)
+    }
   }
 
-  typeText(text) {
+  typeText(target, text, speed) {
     let i = 0
     const intervalId = setInterval(() => {
       if (i < text.length) {
-        this.outputTarget.textContent += text[i]
+        target.textContent += text[i]
         i++
       } else {
         clearInterval(intervalId)
       }
-    }, 500)
+    }, speed)
   }
 }
