@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["video", "audio", "back", "yume"]
+  static targets = ["video", "audio", "back", "yume", "chats"]
 
   connect() {
     this.playMedia();
@@ -11,6 +11,9 @@ export default class extends Controller {
     setTimeout(() => {
       this.stopMedia();
     }, 4000);
+    setTimeout(() => {
+      this.storyStart();
+    }, 5000);
   }
 
   playMedia() {
@@ -21,11 +24,17 @@ export default class extends Controller {
   stopMedia() {
     this.videoTarget.pause();
     this.audioTarget.pause();
-    this.yumeTarget.play();
   }
 
   toggleDisplay() {
     this.videoTarget.classList.add('animate-flicker-out-1');
     this.backTarget.classList.remove('hidden');
   }
+
+  storyStart() {
+    this.yumeTarget.play();
+    this.chatsTarget.classList.remove('hidden');
+  }
+
+
 }

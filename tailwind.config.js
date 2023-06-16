@@ -115,7 +115,7 @@ module.exports = {
         }
       }
     }
-  },  
+  },
   plugins: [
     function({ addUtilities }) {
       const newUtilities = {
@@ -128,10 +128,10 @@ module.exports = {
     require('daisyui'),
     require('tailwindcss-hero-patterns'),
   ],
-  daisyui: { 
+  daisyui: {
     themes: ["light","dark","cupcake","bumblebee","emerald","corporate","synthwave","retro","cyberpunk","valentine","halloween","garden","forest","aqua","lofi","pastel","fantasy","wireframe","black","luxury","dracula","cmyk","autumn","business","acid","lemonade","night","coffee","winter",
       {
-        aespa: {      
+        aespa: {
           "primary": "#1f0d4d",
           "secondary": "#363784",
           "accent": "#D2DBE0",
