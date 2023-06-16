@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["macElement"];
+  static targets = ["HelloElement","LoginElement"];
 
   connect() {
     this.toggleDisplay();
@@ -9,7 +9,10 @@ export default class extends Controller {
 
   toggleDisplay() {
     setTimeout(() => {
-      this.macElementTarget.classList.remove('hidden');
+      this.HelloElementTarget.classList.remove('hidden');
     }, 5000);
+    setTimeout(() => {
+      this.LoginElementTarget.classList.remove('hidden');
+    }, 6000);
   }
 }
