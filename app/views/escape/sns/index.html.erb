@@ -3,7 +3,7 @@
     <div class="mockup-window border bg-base-300 h-screen w-screen">
       <div data-controller="media" class="justify-center text-7xl bg-base-200 flex-col">
         <video muted class="z-50 w-full h-full object-cover absolute" data-media-target="video">
-          <source src="https://kusoappinstitute.s3.ap-northeast-1.amazonaws.com/umbrellas/glitch_-_27706+(1080p).mp4" type="video/mp4">
+          <source src="<%= @video_url %>" type="video/mp4">
         </video>
         <audio src="<%= asset_path 'bg.mp3' %>" preload="auto" data-media-target="audio"></audio>
         <audio src="<%= asset_path 'yume.mp3' %>" preload="auto" data-media-target="yume"></audio>
