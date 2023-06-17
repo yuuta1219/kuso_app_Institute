@@ -75,4 +75,4 @@ gem "sorcery"
 gem "byebug"
 gem "vite_rails"
 gem 'rails-i18n'
-gem 'fog-aws'
+gem 'aws-sdk-s3'
