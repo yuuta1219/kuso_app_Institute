@@ -7,14 +7,14 @@
         </video>
         <audio src="<%= asset_path 'bg.mp3' %>" preload="auto" data-media-target="audio"></audio>
         <audio src="<%= asset_path 'yume.mp3' %>" preload="auto" data-media-target="yume"></audio>
-        <div data-media-target="back" class="z-20 hidden"><%= image_tag "macbook.jpg", class: "w-full h-full object-cover absolute" %></div>
+        <div data-media-target="back" class="z-20 hidden"><%= image_tag "macbook.jpg", class: "w-full h-full object-cover absolute" %></#div>
         <div class="hidden absolute bottom-0 flex w-screen" data-media-target="chats">
-          <div class="flex-1 mx-5 bottom-0 z-40">
-            <div class="bg-sky-700 opacity-70 inline-block">
-              <div class="m-2 text-4xl">ハル</div>
+          <div class="bottom-0 z-40 mx-5 flex-1 relative">
+            <div class="h-32 heropattern-floatingcogs-sky-600 opacity-25 absolute top-0 left-0 right-0 bottom-0">
             </div>
-            <div class="bg-gradient-to-b from-sky-700 opacity-70 h-32">
-              <div data-typing-target="play" class="m-2 text-2xl">…………眠ってしまっていた。</div>
+            <div class="h-32 rounded-lg border-2 border-sky-900 bg-gradient-to-b from-sky-700">
+              <div class="text-sky-100 border-b border-sky-900 px-4 text-2xl">ハル</div>
+              <div data-typing-target="play" class="px-4 pt-2 text-sky-100 text-2xl">…………眠ってしまっていた。</div>
             </div>
           </div>
         </div>
