@@ -4,13 +4,12 @@ export default class extends Controller {
   static targets = [ "welcome", "escape", "object", "play", "return" ]
 
   connect() {
-    // Define your targets, texts, delays, and speeds here
     const elements = [
       { target: this.welcomeTarget, text: 'Welcome to', delay: 6000, speed: 50 },
       { target: this.escapeTarget, text: 'The Escape Game!', delay: 6700, speed: 50 },
       { target: this.objectTarget, text: 'The objective of this game is to restore a malfunctioning AI to its original state.', delay: 8000, speed: 15 },
-      { target: this.playTarget, text: 'PLAY!', delay: 9600, speed: 30 },
-      { target: this.returnTarget, text: 'RETURN!', delay: 9600, speed: 30 }
+      { target: this.playTarget, text: 'PLAY!', delay: 9800, speed: 30 },
+      { target: this.returnTarget, text: 'RETURN!', delay: 9800, speed: 30 }
     ]
 
     for (let element of elements) {

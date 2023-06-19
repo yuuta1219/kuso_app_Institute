@@ -22,9 +22,25 @@ module.exports = {
         "fall": "fall 5s linear infinite",
         "kenburns-top": "kenburns-top 5s ease   both",
         "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
-        "scale-up-hor-center": "scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both"
+        "scale-up-hor-center": "scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+        "flicker-out-1": "flicker-out-1 2s linear   both"
       },
-      keyframes: {
+      keyframes: {"flicker-out-1": {
+        "0%,13.9%,15%,22.9%,25%,34.9%,40%,42.9%,45%,50%,54.9%,69.5%,69.9%,79.9%": {
+            opacity: "1"
+        },
+        "14%,14.9%,23%,24.9%,35%,39.9%,43%,44.9%,55%,69.4%,70%,79.4%,80%,89.8%,90%": {
+            opacity: "0",
+            "box-shadow": "none"
+        },
+        "89.9%": {
+            opacity: "1",
+            "box-shadow": "none"
+        },
+        to: {
+            opacity: "0"
+        }
+      },
         "scale-up-hor-center": {
           "0%": {
               transform: "scaleX(.4)"
@@ -99,7 +115,7 @@ module.exports = {
         }
       }
     }
-  },  
+  },
   plugins: [
     function({ addUtilities }) {
       const newUtilities = {
@@ -112,10 +128,10 @@ module.exports = {
     require('daisyui'),
     require('tailwindcss-hero-patterns'),
   ],
-  daisyui: { 
+  daisyui: {
     themes: ["light","dark","cupcake","bumblebee","emerald","corporate","synthwave","retro","cyberpunk","valentine","halloween","garden","forest","aqua","lofi","pastel","fantasy","wireframe","black","luxury","dracula","cmyk","autumn","business","acid","lemonade","night","coffee","winter",
       {
-        aespa: {      
+        aespa: {
           "primary": "#1f0d4d",
           "secondary": "#363784",
           "accent": "#D2DBE0",
