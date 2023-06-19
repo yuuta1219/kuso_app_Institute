@@ -1,0 +1,2 @@
+module Aespa::BaseHelper
+end
