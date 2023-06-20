@@ -42,5 +42,9 @@ Rails.application.routes.draw do
     resources :endroles
   end
 
+  namespace :aespa do
+    resources :songs
+  end
+
   resources :users
 end
