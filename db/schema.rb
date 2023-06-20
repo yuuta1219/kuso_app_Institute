@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_002119) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_20_013546) do
+  create_table "song_tags", force: :cascade do |t|
+    t.integer "song_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_song_tags_on_song_id"
+    t.index ["tag_id"], name: "index_song_tags_on_tag_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "title", null: false
     t.string "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -43,5 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_002119) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "song_tags", "songs"
+  add_foreign_key "song_tags", "tags"
   add_foreign_key "tasks", "users"
 end
