@@ -1,4 +1,4 @@
 class SongTag < ApplicationRecord
-  has_many :songs, dependent: :destroy
-  has_many :tags, dependent: :destroy
+  belongs_to :song, dependent: :destroy
+  belongs_to :tag, dependent: :destroy
 end

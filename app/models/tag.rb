@@ -1,5 +1,5 @@
 class Tag < ApplicationRecord
-  belongs_to :song_tag
+  has_many :song_tags
 
   validates :title, presence: true
 end
