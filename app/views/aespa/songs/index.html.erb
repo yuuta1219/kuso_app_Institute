@@ -1,4 +1,51 @@
-<div class="font-umbrella min-h-screen relative overflow-hidden">
-  <video autoplay muted loop src="<%= @video_url %>" type="video/mp4" id="myVideo" class="brightness-75 md:block w-full h-full object-cover md:w-full md:h-auto absolute">
-  </video>
+<div class="min-h-screen">
+  <%= form_with(url: aespa_songs_path, method: "get") do |f| %>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :cool, {}, "cool", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :mv, {}, "mv", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :cute, {}, "cute", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :mysterious, {}, "mysterious", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :upbeat, {}, "upbeat", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :melancholic, {}, "melancholic", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :sexy, {}, "sexy", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :fashionable, {}, "fashionable", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <label class="swap swap-flip text-9xl">
+        <%= f.check_box :cover_song, {}, "cover_song", nil %>
+        <div class="swap-on">😈</div>
+        <div class="swap-off">😇</div>
+      </label>
+      <%= f.submit "探す", class: 'btn btn-secondary' %>
+    </div>
+  <% end %>
 </div>
