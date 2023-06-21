@@ -1,3 +1,3 @@
 class Aespa::SongsController < Aespa::BaseController
-  def index; end
+  def index;end
 end
