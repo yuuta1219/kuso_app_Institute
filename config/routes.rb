@@ -43,7 +43,11 @@ Rails.application.routes.draw do
   end
 
   namespace :aespa do
-    resources :songs
+    resources :songs do
+      collection do
+        get 'aespa_no_1'
+      end
+    end
   end
 
   resources :users
