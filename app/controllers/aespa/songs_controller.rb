@@ -10,11 +10,7 @@ class Aespa::SongsController < Aespa::BaseController
       id: track.id
     }
     set_meta_tags og: {
-      title: @spotify_song[:title],
-      description: 'AIに選んでもらったおすすめの楽曲はこちら！',
-      url: request.original_url,
-      image: @spotify_song[:album_art],
-      type: 'music.song'
+      image: @spotify_song[:album_art]
     }
   end
 

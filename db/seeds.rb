@@ -119,8 +119,8 @@ song_titles_cover_song.each do |title|
 end
 
 =end
-song = Song.find_or_create_by(title: 'Lingo')
-tag = Tag.find_or_create_by(title: 'Cool')
+song = Song.find_by(title: 'Lingo')
+tag = Tag.find_by(title: 'Cool')
 SongTag.create!(song: song, tag: tag)
 
 song = Song.find_or_create_by(title: 'ICONIC')
