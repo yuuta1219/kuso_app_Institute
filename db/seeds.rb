@@ -1,4 +1,5 @@
-#User.create!(email: 'admin@example.com',password: '1234',password_confirmation: '1234',)
+=begin
+User.create!(email: 'admin@example.com',password: '1234',password_confirmation: '1234',)
 
 songs = [
   'Next Level',
@@ -116,3 +117,12 @@ song_titles_cover_song.each do |title|
   song = Song.find_by(title: title)
   SongTag.create!(song: song, tag: tag_cover_song)
 end
+
+=end
+song = Song.find_by(title: 'Lingo')
+tag = Tag.find_by(title: 'Cool')
+SongTag.create!(song: song, tag: tag)
+
+song = Song.find_or_create_by(title: 'ICONIC')
+tag = Tag.find_or_create_by(title: 'Fashionable')
+SongTag.create!(song: song, tag: tag)
