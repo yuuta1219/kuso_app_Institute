@@ -1,10 +1,9 @@
 =begin
 User.create!(email: 'admin@example.com',password: '1234',password_confirmation: '1234',)
 =end
-
+SongTag.destroy_all
 Song.destroy_all
 Tag.destroy_all
-SongTag.destroy_all
 
 songs = [
   'Next Level',
