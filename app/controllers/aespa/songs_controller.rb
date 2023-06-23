@@ -1,6 +1,23 @@
 class Aespa::SongsController < Aespa::BaseController
   def index; end
 
+  def show
+    @song = Song.find_by_title(params[:title])
+    track = RSpotify::Track.search("#{@song.title} aespa").first
+    @spotify_song = {
+      title: track.name,
+      album_art: track.album.images.first['url'],
+      id: track.id
+    }
+    set_meta_tags og: {
+      title: @spotify_song[:title],
+      description: 'AIに選んでもらったおすすめの楽曲はこちら！',
+      url: request.original_url,
+      image: @spotify_song[:album_art],
+      type: 'music.song'
+    }
+  end
+
   def aespa_no_1
     selected_tag_ids = params[:tag_ids].present? ? Tag.where(title: params[:tag_ids]).pluck(:id) : []
     if selected_tag_ids.empty? || selected_tag_ids.size == Tag.count
@@ -15,19 +32,7 @@ class Aespa::SongsController < Aespa::BaseController
           break if @song.present?
         end
       end
+      redirect_to aespa_song_path(@song.title)
     end
-    track = RSpotify::Track.search("#{@song.title} aespa").first
-    @spotify_song = {
-      title: track.name,
-      album_art: track.album.images.first['url'],
-      id: track.id
-    }
-    set_meta_tags og: {
-      title: @spotify_song[:title],
-      description: 'AIに選んでもらったおすすめの楽曲はこちら！',
-      url: request.original_url,
-      image: @spotify_song[:album_art],
-      type: 'music.song'
-    }
   end
 end
