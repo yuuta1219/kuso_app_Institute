@@ -3,7 +3,11 @@ class Aespa::SongsController < Aespa::BaseController
 
   def show
     @song = Song.find_by_title(params[:title])
-    track = RSpotify::Track.search("#{@song.title} aespa").first
+    if @song.title == "'Till We Meet Again"
+      track = RSpotify::Track.search("#{@song.title} spicy aespa").first
+    else
+      track = RSpotify::Track.search("#{@song.title} aespa").first
+    end
     @spotify_song = {
       title: track.name,
       album_art: track.album.images.first['url'],
@@ -16,7 +20,6 @@ class Aespa::SongsController < Aespa::BaseController
   end
 
   def aespa_no_1
-    byebug
     selected_tag_ids = params[:tag_ids].present? ? Tag.where(title: params[:tag_ids]).pluck(:id) : []
     if selected_tag_ids.empty? || selected_tag_ids.size == Tag.count
       @song = Song.order("RANDOM()").first
