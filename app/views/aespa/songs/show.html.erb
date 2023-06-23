@@ -26,4 +26,5 @@
 </div>
 <% content_for :head do %>
   <meta property="og:image" content="<%= @spotify_song[:album_art] %>">
+  <meta property="og:description" content="AIが私に選んだおすすめの楽曲は、aespaの<%= @spotify_song[:title] %>">
 <% end %>
