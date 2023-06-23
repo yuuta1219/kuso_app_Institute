@@ -32,7 +32,7 @@ class Aespa::SongsController < Aespa::BaseController
           break if @song.present?
         end
       end
-      redirect_to aespa_song_path(@song.title)
     end
+    redirect_to aespa_song_path(@song.title)
   end
 end
