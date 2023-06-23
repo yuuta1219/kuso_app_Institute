@@ -1,5 +1,10 @@
 =begin
 User.create!(email: 'admin@example.com',password: '1234',password_confirmation: '1234',)
+=end
+
+Song.destroy_all
+Tag.destroy_all
+SongTag.destroy_all
 
 songs = [
   'Next Level',
@@ -63,14 +68,14 @@ tag_sexy = Tag.find_by(title: 'Sexy')
 tag_fashionable = Tag.find_by(title: 'Fashionable')
 tag_cover_song = Tag.find_by(title: 'Cover Song')
 
-song_titles_cool = ['Savage', 'aenergy', 'I\'ll Make You Cry', 'YEPPI YEPPI', 'ICONIC', 'Lucid Dream', 'Spicy', 'Girls', 'Illusion', 'Black Mamba', 'Salty & Sweet', 'Next Level']
+song_titles_cool = ['Savage', 'aenergy', 'I\'ll Make You Cry', 'YEPPI YEPPI', 'ICONIC', 'Lucid Dream', 'Spicy', 'Girls', 'Illusion', 'Black Mamba', 'Salty & Sweet','Lingo', 'Next Level']
 song_titles_mv = ['Next Level','Dreams Come True','aenergy','Savage','Lucid Dream', 'Girls', 'Life\'s Too Short','Forever', 'Welcome To MY World','Spicy']
 song_titles_cute = ['Dreams Come True','YEPPI YEPPI','Girls','Lingo','ICU','Life\'s Too Short','Spicy','Thirsty','\'Till We Meet Again']
 song_titles_mysterious = ['Savage', 'Next Level', 'Black Mamba','Lucid Dream', 'Welcome To MY World','Spicy','Salty & Sweet','I\'m Unhappy']
 song_titles_upbeat = ['Savage', 'aenergy', 'Black Mamba', 'I\'ll Make You Cry','YEPPI YEPPI','ICU','Spicy']
 song_titles_melancholic = ['Lucid Dream', 'Girls','ICU','Forever','Thirsty','I\'m Unhappy', '\'Till We Meet Again']
 song_titles_sexy = ['Lucid Dream','Illusion','Black Mamba','Salty & Sweet','Thirsty' ]
-song_titles_fashionable = ['Thirsty','Lucid Dream','I\'m Unhappy','Hold On Tight']
+song_titles_fashionable = ['Thirsty','Lucid Dream','I\'m Unhappy','Hold On Tight','ICONIC']
 song_titles_cover_song = ['Hold On Tight','Dreams Come True','Next Level']
 
 song_titles_cool.each do |title|
@@ -117,12 +122,3 @@ song_titles_cover_song.each do |title|
   song = Song.find_by(title: title)
   SongTag.create!(song: song, tag: tag_cover_song)
 end
-
-=end
-song = Song.find_by(title: 'Lingo')
-tag = Tag.find_by(title: 'Cool')
-SongTag.create!(song: song, tag: tag)
-
-song = Song.find_or_create_by(title: 'ICONIC')
-tag = Tag.find_or_create_by(title: 'Fashionable')
-SongTag.create!(song: song, tag: tag)
