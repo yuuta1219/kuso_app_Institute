@@ -1,8 +1,6 @@
 <div class="min-h-screen">
   <div class="text-5xl md:text-7xl m-4">A.I.Song Searcher</div>
   <div class="text-2xl md:text-4xl m-4">A.I<span class="text-xs">※1</span>による、貴方だけの音楽体験がここに</div>
-  <div class="text-xl md:text-3xl mt-10 mx-4">操作方法</div>
-  <div class="text-xl md:text-3xl m-4">貴方の気分に合う、パネルを選択してsearchボタンをクリックするだけでA.Iが素敵な音楽を選び提供いたします。パネルは最大9個までお選びいただけます。</div>
   <%= form_with(url: aespa_no_1_aespa_songs_path, method: "get") do |f| %>
     <div class="flex">
       <div class="flex-1"></div>
@@ -68,7 +66,7 @@
           </div>
         </label>
         <label class="swap swap-flip text-9xl col-span-1 max-w-xs">
-          <%= f.check_box :Mv, { name: "tag_ids[]" }, "Mv", nil %>
+          <%= f.check_box :MV, { name: "tag_ids[]" }, "MV", nil %>
           <div class="swap-on">
             <div class="w-24 h-24 sm:w-40 sm:h-40 bg-secondary flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full relative m-5 sm:m-10" viewBox="0 0 384 512" stroke="#1f0d4d" fill="#1f0d4d"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M222.6 43.2l-.1 4.8H288c53 0 96 43 96 96s-43 96-96 96H248V160h40c8.8 0 16-7.2 16-16s-7.2-16-16-16H248 220l-4.5 144H256c53 0 96 43 96 96s-43 96-96 96H240V384h16c8.8 0 16-7.2 16-16s-7.2-16-16-16H213l-3.1 99.5L208.5 495l0 1c-.3 8.9-7.6 16-16.5 16s-16.2-7.1-16.5-16l0-1-1-31H136c-22.1 0-40-17.9-40-40s17.9-40 40-40h36l-1-32H152c-53 0-96-43-96-96c0-47.6 34.6-87.1 80-94.7V256c0 8.8 7.2 16 16 16h16.5L164 128H136 122.6c-9 18.9-28.3 32-50.6 32H56c-30.9 0-56-25.1-56-56S25.1 48 56 48h8 8 89.5l-.1-4.8L161 32c0-.7 0-1.3 0-1.9c.5-16.6 14.1-30 31-30s30.5 13.4 31 30c0 .6 0 1.3 0 1.9l-.4 11.2zM64 112a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
@@ -146,6 +144,9 @@
       </div>
       <div class="flex-1"></div>
     </div>
-    <div class="text-xs">注釈※1について、A.Iとは「(A)aespaが大好きな人間が、(I)一生懸命頑張ってデータを入力したアプリ」の略称となりますので、ご了承ください。</div>
+    <div class="text-xl md:text-3xl mx-4">操作方法</div>
+    <div class="text-xl md:text-3xl m-4">今の貴方の気分にあったパネルを選択して、searchボタンをクリックするだけでA.Iが素敵な音楽を選び提供いたします。</div>
+    <div class="text-xl md:text-3xl m-4 mb-40">パネルは最大9個までお選びいただけます。</div>
+    <div class="text-xs">注釈※1について、A.Iとは「(A)aespaが大好きな人間が、(I)一生懸命データを入力したアプリ」の略称となりますので、ご了承ください。</div>
   <% end %>
 </div>
