@@ -13,7 +13,7 @@ class Aespa::SongsController < Aespa::BaseController
       album_art: track.album.images.first['url'],
       id: track.id
     }
-    set_meta_tags og: {
+    set_meta_tags twitter: {
       url: CGI.escape(request.original_url),
       title: "A.I.SongSearcher",
       image: @spotify_song[:album_art],
