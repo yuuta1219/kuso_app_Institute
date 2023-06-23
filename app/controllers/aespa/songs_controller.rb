@@ -16,6 +16,7 @@ class Aespa::SongsController < Aespa::BaseController
   end
 
   def aespa_no_1
+    byebug
     selected_tag_ids = params[:tag_ids].present? ? Tag.where(title: params[:tag_ids]).pluck(:id) : []
     if selected_tag_ids.empty? || selected_tag_ids.size == Tag.count
       @song = Song.order("RANDOM()").first

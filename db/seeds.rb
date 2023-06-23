@@ -1,9 +1,6 @@
-=begin
+
 User.create!(email: 'admin@example.com',password: '1234',password_confirmation: '1234',)
-=end
-SongTag.delete_all
-Song.delete_all
-Tag.delete_all
+
 
 songs = [
   'Next Level',
