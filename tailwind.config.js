@@ -24,7 +24,7 @@ module.exports = {
         "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "scale-up-hor-center": "scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
         "flicker-out-1": "flicker-out-1 2s linear   both",
-        "slide": "slide 5s linear infinite"
+        "slide": "slide 10s linear infinite"
       },
       keyframes: {
         "slide": {
