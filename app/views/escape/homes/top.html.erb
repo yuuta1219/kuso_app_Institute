@@ -1,0 +1,32 @@
+<div class="relative min-h-screen overflow-hidden font-robo" data-controller="home-mac">
+  <%= image_tag "macbook.jpg", class: "animate-kenburns-top md:block w-full h-full object-cover md:w-full md:h-auto absolute" %>
+  <div data-controller="typing">
+    <div data-home-mac-target="HelloElement" class="hidden z-20 animate-scale-up-hor-center">
+      <div class="mockup-window border bg-base-300 h-screen w-screen">
+        <div class="flex justify-center px-4 text-7xl py-16 bg-base-200 flex-col">
+          <div data-typing-target="welcome" class="text-9xl"></div>
+          <div data-typing-target="escape" class="text-9xl"></div>
+          <div data-typing-target="object" class="text-3xl m-5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden absolute bottom-0 flex w-screen" data-home-mac-target="LoginElement">
+      <div class="flex-1 mx-5 ml-10 my-10 bottom-0 z-50 animate-scale-up-hor-center">
+        <div class="mockup-window border bg-base-300">
+          <%= link_to escape_homes_path  do %>
+            <div data-typing-target="play" class="flex justify-center px-4 text-7xl py-16 bg-base-200">
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="flex-1 mx-5 my-10 z-50 animate-scale-up-hor-center">
+        <div class="mockup-window border bg-base-300">
+          <%= link_to root_path, data: { turbo: false } do%>
+            <div data-typing-target="return" class="flex justify-center px-4 text-7xl py-16 bg-base-200">
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
