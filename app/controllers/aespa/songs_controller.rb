@@ -1,5 +1,10 @@
 class Aespa::SongsController < Aespa::BaseController
-  def index; end
+  def index
+    unless cookies[:aespa_video_url]
+      s3_service = S3Service.new
+      cookies[:aespa_video_url] = { value: s3_service.fetch_video_url('umbrellas/va2.mp4'), expires: 6.days.from_now }
+    end
+  end
 
   def show
     @song = Song.find_by_title(params[:title])

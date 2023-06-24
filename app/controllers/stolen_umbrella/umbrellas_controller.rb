@@ -1,9 +1,10 @@
 class StolenUmbrella::UmbrellasController < StolenUmbrella::BaseController
 
   def index
-    s3_service = S3Service.new
-    @video_url = s3_service.fetch_video_url('umbrellas/151426 (720p).mp4')
-
+    unless cookies[:video_url]
+      s3_service = S3Service.new
+      cookies[:video_url] = { value: s3_service.fetch_video_url('umbrellas/151426 (720p).mp4'), expires: 6.days.from_now }
+    end
     @umbrellas = Umbrella.order(created_at: :desc).limit(30)
     @umbrella = Umbrella.new
   end
