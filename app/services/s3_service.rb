@@ -9,7 +9,7 @@ class S3Service
 
   def fetch_video_url(key)
     signer = Aws::S3::Presigner.new(client: @client)
-    url = signer.presigned_url(:get_object, bucket: @bucket, key: key, expires_in: 3600)
+    url = signer.presigned_url(:get_object, bucket: @bucket, key: key, expires_in: 604800)
     url.to_s
   end
 end
