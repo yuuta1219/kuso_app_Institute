@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
+  get 'escape', to: 'escape/homes#top'
   namespace :escape do
     resources :homes
     resources :sns
