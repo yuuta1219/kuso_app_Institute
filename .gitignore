@@ -41,6 +41,7 @@
 .DS_Store
 /.env
 .vscode
+/.byebug_history
 
 # Vite Ruby
 /public/vite*

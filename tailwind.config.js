@@ -23,24 +23,39 @@ module.exports = {
         "kenburns-top": "kenburns-top 5s ease   both",
         "focus-in-expand-fwd": "focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "scale-up-hor-center": "scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
-        "flicker-out-1": "flicker-out-1 2s linear   both"
+        "flicker-out-1": "flicker-out-1 2s linear   both",
+        "slide": "slide 5s linear infinite"
       },
-      keyframes: {"flicker-out-1": {
-        "0%,13.9%,15%,22.9%,25%,34.9%,40%,42.9%,45%,50%,54.9%,69.5%,69.9%,79.9%": {
+      keyframes: {
+        "slide": {
+          "0%": {
+            left: "100%",
             opacity: "1"
-        },
-        "14%,14.9%,23%,24.9%,35%,39.9%,43%,44.9%,55%,69.4%,70%,79.4%,80%,89.8%,90%": {
-            opacity: "0",
-            "box-shadow": "none"
-        },
-        "89.9%": {
-            opacity: "1",
-            "box-shadow": "none"
-        },
-        to: {
+          },
+          "90%": {
+            opacity: "1"
+          },
+          "100%": {
+            left: "-200%",
             opacity: "0"
-        }
-      },
+          }
+        },
+        "flicker-out-1": {
+          "0%,13.9%,15%,22.9%,25%,34.9%,40%,42.9%,45%,50%,54.9%,69.5%,69.9%,79.9%": {
+              opacity: "1"
+          },
+          "14%,14.9%,23%,24.9%,35%,39.9%,43%,44.9%,55%,69.4%,70%,79.4%,80%,89.8%,90%": {
+              opacity: "0",
+              "box-shadow": "none"
+          },
+          "89.9%": {
+              opacity: "1",
+              "box-shadow": "none"
+          },
+          to: {
+              opacity: "0"
+          }
+        },
         "scale-up-hor-center": {
           "0%": {
               transform: "scaleX(.4)"
