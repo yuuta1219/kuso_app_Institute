@@ -25,4 +25,13 @@ class Song < ApplicationRecord
         .first
     end
   end
+
+  def self.fetch_spotify_song(title, search_term="aespa")
+    track = RSpotify::Track.search("#{title} #{search_term}").first
+    {
+      title: track.name,
+      album_art: track.album.images.first['url'],
+      id: track.id
+    }
+  end
 end
