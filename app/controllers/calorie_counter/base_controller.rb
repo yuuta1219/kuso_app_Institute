@@ -12,6 +12,6 @@ class CalorieCounter::BaseController < ApplicationController
   end
 
   def not_prison
-    redirect_to calorie_counter_chats_path unless current_user || current_user && current_user.prisoner? 
+    redirect_to calorie_counter_chats_path unless current_user || current_user && current_user.prisoner?
   end
 end
