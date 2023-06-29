@@ -1,11 +1,11 @@
 class Aespa::SongsController < Aespa::BaseController
   skip_before_action :set_video_url, only: :show
 
-  def index
-    if params[:tag_titles]
+  def index; end
+
+  def aespa_no_1
       @song = Song.select_song(params[:tag_titles])
       redirect_to aespa_song_path(@song.title)
-    end
   end
 
   def show
