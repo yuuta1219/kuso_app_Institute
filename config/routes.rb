@@ -45,9 +45,6 @@ Rails.application.routes.draw do
 
   namespace :aespa do
     resources :songs, only: [:index, :show], param: :title do
-      collection do
-        get 'aespa_no_1'
-      end
     end
   end
 
