@@ -1,5 +1,6 @@
 class TopsController < ApplicationController
   before_action :theme_color
+  skip_before_action :set_ogp, only: :top
 
   def top
     @color_select = "approval"
@@ -7,7 +8,7 @@ class TopsController < ApplicationController
       card: "summary_large_image",
       url: "https://kuso-app-institute.magia.runteq.jp/",
       title: "K.U.S.O.AppInstitute",
-      image: ["https://kuso-app-institute.magia.runteq.jp/images/ogp1.png", "https://kuso-app-institute.magia.runteq.jp/images/ogp2.png"].sample,
+      image: "https://kuso-app-institute.magia.runteq.jp/images/ogp1.png",
       description: "クソアプリ研究所を発見したよ！"
     }
   end
