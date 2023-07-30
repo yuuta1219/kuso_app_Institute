@@ -7,7 +7,7 @@ class TopsController < ApplicationController
       card: "summary",
       url: "https://kuso-app-institute.magia.runteq.jp/",
       title: "K.U.S.O.AppInstitute",
-      image: image_url(['ogp1.png', 'ogp2.png'].sample),
+      image: ActionController::Base.helpers.image_url(['ogp1.png', 'ogp2.png'].sample),
       description: "クソアプリ研究所を発見したよ！"
     }
   end
