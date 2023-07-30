@@ -1,5 +1,6 @@
 class Aespa::SongsController < Aespa::BaseController
   skip_before_action :set_video_url, only: :show
+  skip_before_action :set_ogp, only: :show
 
   def index; end
 
