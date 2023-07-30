@@ -3,6 +3,13 @@ class TopsController < ApplicationController
 
   def top
     @color_select = "approval"
+    set_meta_tags twitter: {
+      card: "summary",
+      url: "https://kuso-app-institute.magia.runteq.jp/",
+      title: "A.I.SongSearcher",
+      image: image_url(['ogp1.png', 'ogp2.png'].sample),
+      description: "AIが私に選んだおすすめの楽曲は、aespaの#{@spotify_song[:title]}"
+    }
   end
 
   def terms; end
