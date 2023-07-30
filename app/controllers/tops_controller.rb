@@ -6,9 +6,9 @@ class TopsController < ApplicationController
     set_meta_tags twitter: {
       card: "summary",
       url: "https://kuso-app-institute.magia.runteq.jp/",
-      title: "A.I.SongSearcher",
+      title: "K.U.S.O.AppInstitute",
       image: image_url(['ogp1.png', 'ogp2.png'].sample),
-      description: "AIが私に選んだおすすめの楽曲は、aespaの#{@spotify_song[:title]}"
+      description: "クソアプリ研究所を発見したよ！"
     }
   end
 
