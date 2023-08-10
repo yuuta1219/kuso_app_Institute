@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_013546) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_10_153639) do
+  create_table "page_views", force: :cascade do |t|
+    t.integer "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "song_tags", force: :cascade do |t|
     t.integer "song_id", null: false
     t.integer "tag_id", null: false

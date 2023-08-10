@@ -4,6 +4,8 @@ class TopsController < ApplicationController
 
   def top
     @color_select = "approval"
+    page_view = PageView.first
+    page_view.increment!(:count)
     set_meta_tags twitter: {
       card: "summary_large_image",
       url: "https://kuso-app-institute.magia.runteq.jp/",
