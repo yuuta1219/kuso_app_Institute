@@ -1,7 +1,8 @@
 <div id="heropattern", class="min-h-screen pt-10 relative overflow-hidden">
   <div class="whitespace-nowrap absolute animate-slide top-0 text-9xl">研究所へようこそ</div>
-  <div class="flex flex-col mt-40">
-    <div class="">あなたは<%= PageView.first.count %>人目のお客さまです！</div>
+  <div class="flex flex-col items-center mt-40">
+    <div class="stat-value">あなたは<%= PageView.first.count %>人目のお客さまです！</div>
+    <div class="">キリ番の方は掲示板に書き込みしてください！</div>
     <%= link_to "カロリーカウンターAIへ",calorie_counter_chats_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }  %>
     <%= link_to "ポモドーロタイマーへ",pomodoro_timer_timers_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false }  %>
     <%= link_to "あの日奪われた傘の行方を僕達はまだ知らない",stolen_umbrella_umbrellas_path, class: "btn btn-ghost normal-case text-xl m-4", data: { turbo: false } %>
