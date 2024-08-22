@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Aitask from '../components/aitask/Aitask';
+import TalkDeckButler from '../react/talkdeckbutler/TalkDeckButler';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("aitask");
   ReactDOM.render(
     <React.StrictMode>
-      <Aitask />
+      <TalkDeckButler />
     </React.StrictMode>,
     document.getElementById('root')
   );

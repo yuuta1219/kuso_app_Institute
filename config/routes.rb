@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     resources :umbrellas
   end
 
-  namespace :aidoji do
+  namespace :talk_deck_butler do
     resources :tasks
   end
 

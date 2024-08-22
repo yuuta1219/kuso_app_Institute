@@ -1,4 +1,4 @@
-class Aidoji::TasksController < Aidoji::BaseController
+class TalkDeckButler::TasksController < TalkDeckButler::BaseController
   before_action :aidoji, only: [:index, :create, :update, :destroy]
 
   def index
@@ -12,7 +12,7 @@ class Aidoji::TasksController < Aidoji::BaseController
   def create
     @task = current_user.tasks.build(task_params)
     if @task.save
-      redirect_to aidoji_tasks_path(@task), success: "nice task create"
+      redirect_to talk_deck_butler_tasks_path(@task), success: "nice task create"
     else
       render turbo_stream: turbo_stream.replace('error_messages', partial: 'shared/error_messages', locals: { object: @task })
     end
@@ -21,7 +21,7 @@ class Aidoji::TasksController < Aidoji::BaseController
   def update
     @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
-      redirect_to aidoji_tasks_path(@task), success: "nice task update"
+      redirect_to talk_deck_butler_tasks_path(@task), success: "nice task update"
     else
       render turbo_stream: turbo_stream.replace('error_messages', partial: 'shared/error_messages', locals: { object: @task })
     end
@@ -30,7 +30,7 @@ class Aidoji::TasksController < Aidoji::BaseController
   def destroy
     @task = current_user.tasks.find(params[:id])
     @task.destroy!
-    redirect_to aidoji_tasks_path(@task), success: "nice task destroy"
+    redirect_to talk_deck_butler_tasks_path(@task), success: "nice task destroy"
   end
 
   private
