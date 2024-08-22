@@ -1,0 +1,19 @@
+<div class="h-[90%] bg-base-100 pt-5">
+  <h2 class="mx-4 text-4xl font-bold">ログイン</h2>
+  <%= form_with(url: login_path, data: { turbo: false }, method: :post) do |form| %>
+    <div class="m-4">
+      <%= form.label :email, class: "text-xl" %>
+      <%= form.email_field :email, class: "mt-2 input input-bordered input-lg md:input-md w-full", placeholder: "メールアドレスを入力してください" %>
+    </div>
+    <div class="m-4">
+      <%= form.label :password, class: "text-xl" %>
+      <%= form.password_field :password, class: "mt-2 input input-bordered input-lg md:input-md w-full", placeholder: "パスワードを入力してください" %>
+    </div>
+    <div class="m-4">
+      <%= form.submit "ログイン", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  <div class="flex flex-col items-center justify-between">
+    <%= link_to "登録ページへ", new_user_path, class: "text-blue-500 hover:text-blue-800" %>
+  </div>
+</div>
